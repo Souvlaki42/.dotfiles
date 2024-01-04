@@ -1,7 +1,7 @@
-# dotfiles
-My dotfiles configuration repository for my linux based installation.
+# dot files
+My dot files configuration repository for my Linux based installation.
 
 # Just run this command
 ```shell
-curl -O https://raw.githubusercontent.com/Souvlaki42/.dotfiles/main/install.sh | bash
+sudo apt-get install git -y && git clone https://github.com/Souvlaki42/.dotfiles.git ~/.dotfiles && sudo chmod +x ~/.dotfiles/install.sh && ~/.dotfiles/install.sh && ln -s ~/.dotfiles/.bashrc ~/.bashrc && ln -s ~/.dotfiles/.gitconfig ~/.gitconfig
 ```
