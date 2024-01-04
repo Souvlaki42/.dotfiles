@@ -120,3 +120,4 @@ fi
 alias vim="nvim"
 alias conf="vim ~/.bashrc"
 alias lh="ls -ld .?*"
+alias gs="git status"

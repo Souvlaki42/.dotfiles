@@ -24,6 +24,12 @@ sudo snap install nvim --classic
 # neofetch
 sudo apt-get install neofetch -y
 
+# python3
+sudo apt-get install python3 -y
+
+# dconf
+# sudo apt-get install dconf -y
+
 # github cli
 type -p curl >/dev/null || (sudo apt update && sudo apt install curl -y)
 curl -fsSL https://cli.github.com/packages/githubcli-archive-keyring.gpg | sudo dd of=/usr/share/keyrings/githubcli-archive-keyring.gpg \
@@ -32,5 +38,6 @@ curl -fsSL https://cli.github.com/packages/githubcli-archive-keyring.gpg | sudo 
 && sudo apt update \
 && sudo apt install gh -y
 
-
+# terminal themes
+curl -L https://raw.githubusercontent.com/catppuccin/gnome-terminal/v0.2.0/install.py | python3 -
 
