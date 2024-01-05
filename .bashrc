@@ -121,3 +121,8 @@ alias vim="nvim"
 alias conf="vim ~/.bashrc"
 alias lh="ls -ld .?*"
 alias gs="git status"
+
+# Start tmux session or attach to the last session
+if command -v tmux &> /dev/null && [ -z "$TMUX" ]; then
+    tmux a || tmux
+fi

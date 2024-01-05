@@ -27,6 +27,9 @@ sudo apt-get install neofetch -y
 # python3
 sudo apt-get install python3 -y
 
+# ripgrep
+sudo apt-get install ripgrep -y
+
 # dconf
 # sudo apt-get install dconf -y
 
