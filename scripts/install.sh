@@ -30,6 +30,9 @@ sudo apt-get install python3 -y
 # python3 pip
 sudo apt-get install python3-pip -y
 
+# python3 venv
+sudo apt-get install python3-venv -y
+
 # ripgrep
 sudo apt-get install ripgrep -y
 
@@ -66,10 +69,11 @@ curl -fsSL https://bun.sh/install | bash
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 
 # go
-curl -O https://go.dev/dl/go1.21.5.linux-amd64.tar.gz
-sudo rm -rf /usr/local/go
-sudo tar -C /usr/local -xzf go1.21.5.linux-amd64.tar.gz
-sudo rm go1.21.5.linux-amd64.tar.gz
+echo "Please install go systemwide https://go.dev/doc/install manually..."
+read ok
+
+# ruby & gem
+sudo apt-get install ruby-full -y
 
 # github cli
 type -p curl >/dev/null || (sudo apt update && sudo apt install curl -y)
