@@ -117,12 +117,36 @@ if ! shopt -oq posix; then
 fi
 
 # my custom aliases and configuration
+# PS1='\[\e[92;1m\]\u\[\e[0m\]:\[\033[01;34m\]\w\[\e[0m\]\$ '
+PS1='\[\e[92;1m\]\u\[\e[0m\]:\[\033[01;34m\]\w\[\e[0m\]$(__git_ps1 " (\[\033[01;31m\]%s\[\e[0m\])")\$ '
+
 alias vim="nvim"
 alias conf="vim ~/.bashrc"
-alias lh="ls -ld .?*"
+alias lh="ls -d .[^.]*"
 alias gs="git status"
 
 # Start tmux session or attach to the last session
 if command -v tmux &> /dev/null && [ -z "$TMUX" ]; then
     tmux a || tmux
 fi
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# pnpm
+export PNPM_HOME="/home/souvlaki42/.local/share/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH=$BUN_INSTALL/bin:$PATH
+. "$HOME/.cargo/env"
+
+# deno
+export DENO_INSTALL="/home/souvlaki42/.deno"
+export PATH="$DENO_INSTALL/bin:$PATH"
