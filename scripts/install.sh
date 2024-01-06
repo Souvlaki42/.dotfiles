@@ -47,7 +47,11 @@ sudo apt-get install fd-find -y
 
 # nvm & node
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
+source ~/.bashrc
 nvm install --lts
+
+# npm
+sudo apt-get install npm -y
 
 # pnpm
 curl -fsSL https://get.pnpm.io/install.sh | sh -
@@ -63,7 +67,8 @@ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 
 # go
 curl -O https://go.dev/dl/go1.21.5.linux-amd64.tar.gz
-sudo rm -rf /usr/local/go && sudo tar -C /usr/local -xzf go1.21.5.linux-amd64.tar.gz
+sudo rm -rf /usr/local/go
+sudo tar -C /usr/local -xzf go1.21.5.linux-amd64.tar.gz
 sudo rm go1.21.5.linux-amd64.tar.gz
 
 # github cli
