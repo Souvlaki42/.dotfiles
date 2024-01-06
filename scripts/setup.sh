@@ -8,3 +8,11 @@ read token
 source ./install.sh
 
 echo $token | gh auth login --with-token
+
+source ./terminal.sh
+
+source ./remove_dotfiles.sh
+
+source ./create_dotfiles.sh
+
+source ./link_dotfiles.sh
