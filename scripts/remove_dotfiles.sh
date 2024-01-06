@@ -6,3 +6,4 @@ rm -rf ~/.config/nvim
 rm -rf ~/.profile
 rm -rf ~/.sudo_as_admin_successful
 rm -rf ~/.config/tmux/tmux.conf
+rm -rf ~/.local/share/fonts/ 
