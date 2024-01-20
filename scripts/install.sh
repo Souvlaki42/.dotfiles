@@ -48,6 +48,9 @@ sudo apt-get install fd-find -y
 # dconf
 # sudo apt-get install dconf -y
 
+# timeshift
+sudo apt-get install timeshift -y
+
 # nvm & node
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
 source ~/.bashrc
@@ -85,4 +88,3 @@ curl -fsSL https://cli.github.com/packages/githubcli-archive-keyring.gpg | sudo 
 
 # terminal themes
 curl -L https://raw.githubusercontent.com/catppuccin/gnome-terminal/v0.2.0/install.py | python3 -
-

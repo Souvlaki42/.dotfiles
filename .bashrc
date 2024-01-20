@@ -120,10 +120,12 @@ fi
 # PS1='\[\e[92;1m\]\u\[\e[0m\]:\[\033[01;34m\]\w\[\e[0m\]\$ '
 PS1='\[\e[92;1m\]\u\[\e[0m\]:\[\033[01;34m\]\w\[\e[0m\]$(__git_ps1 " (\[\033[01;31m\]%s\[\e[0m\])")\$ '
 
+# aliases
 alias vim="nvim"
 alias conf="vim ~/.bashrc"
-alias lh="ls -d .[^.]*"
+alias lh="l -d .[^.]*"
 alias gs="git status"
+alias tkill="tmux kill-server"
 
 # Start tmux session or attach to the last session
 if command -v tmux &> /dev/null && [ -z "$TMUX" ]; then

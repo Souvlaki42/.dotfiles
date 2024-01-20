@@ -19,9 +19,11 @@ return {
       local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
       local lspconfig = require("lspconfig")
+
       lspconfig.lua_ls.setup({ capabilities = capabilities })
       lspconfig.tsserver.setup({ capabilities = capabilities })
-      lspconfig.rust_analyzer.setup({ capabilities = capabilities })
+      lspconfig.denols.setup({ root_dir = lspconfig.util.root_pattern("deno.json", "deno.jsonc"), capabilities = capabilities })
+      lspconfig.rust_analyzer.setup({ root_dir = lspconfig.util.root_pattern("package.json"), single_file_support = false, capabilities = capabilities })
       vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
       vim.keymap.set("n", "gd", vim.lsp.buf.definition, {})
       vim.keymap.set({ "n", "v" }, "<leader>ca", vim.lsp.buf.code_action, {})
