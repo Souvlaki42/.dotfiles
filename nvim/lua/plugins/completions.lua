@@ -15,6 +15,9 @@ return {
     "andersevenrud/cmp-tmux",
   },
   {
+    "lukas-reineke/cmp-rg"
+  },
+  {
     "L3MON4D3/LuaSnip",
     dependencies = {
       "saadparwaiz1/cmp_luasnip",
@@ -49,7 +52,8 @@ return {
           { name = "buffer" },
           { name = "nvim_lua" },
           { name = "path" },
-          { name = "tmux" }
+          { name = "tmux" },
+          { name = "rg" },
 				}),
 			})
 		end,

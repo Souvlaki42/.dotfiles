@@ -152,3 +152,6 @@ export PATH=$BUN_INSTALL/bin:$PATH
 # deno
 export DENO_INSTALL="/home/souvlaki42/.deno"
 export PATH="$DENO_INSTALL/bin:$PATH"
+
+# Turso
+export PATH="/home/souvlaki42/.turso:$PATH"
