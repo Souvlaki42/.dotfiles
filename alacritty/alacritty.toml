@@ -1,0 +1,34 @@
+import = [
+  "~/.config/alacritty/catppuccin-mocha.toml"
+]
+
+[font]
+normal = { family = "JetBrains Mono Nerd Font", style = "Medium" }
+bold = { family = "JetBrains Mono Nerd Font", style = "Bold" }
+italic = { family = "JetBrains Mono Nerd Font", style = "MediumItalic" }
+bold_italic = { family = "JetBrains Mono Nerd Font", style = "BoldItalic" }
+size = 14
+
+[scrolling]
+history = 100000
+multiplier = 3
+
+[window]
+opacity = 0.8
+blur = true
+class = { instance = "Alacritty", general = "Alacritty" }
+padding = { x = 15, y = 15 } 
+dynamic_padding = true
+dynamic_title = false
+title = "Alacritty"
+resize_increments = true
+decorations_theme_variant = "Dark"
+
+[cursor]
+style = { shape = "Beam", blinking = "Always" }
+
+[mouse]
+hide_when_typing = true
+
+[env]
+TERM = "xterm-256color"
