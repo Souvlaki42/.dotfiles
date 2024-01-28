@@ -1,12 +1,4 @@
-// When chroot
 Enable os probing in /etc/default/grub
-grub-mkconfig -o /boot/grub/grub.cfg
-exit
-reboot
-
-// After chroot
-datetimectl set-ntp true
-datetimectl set-local-rtc 1 --adjust-system-clock
 grub-mkconfig -o /boot/grub/grub.cfg
 mkdir ~/Pictures ~/Downloads
 reboot

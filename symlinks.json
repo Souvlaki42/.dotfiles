@@ -34,9 +34,9 @@
 		"absolute_path": ".config/waybar",
 		"type": "directory"
 	},
-  {
-    "relative_path": "wofi",
-    "absolute_path": ".config/wofi",
-    "type": "directory"
-  }
+	{
+    		"relative_path": "wofi",
+    		"absolute_path": ".config/wofi",
+    		"type": "directory"
+  	}
 ]

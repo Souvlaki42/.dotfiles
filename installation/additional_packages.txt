@@ -14,7 +14,6 @@ networkmanager
 ntfs-3g
 os-prober
 ttf-font-awesome
-ttf-jetbrains-mono-nerd
 vim
 waybar
 wireless_tools
