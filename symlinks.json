@@ -1,0 +1,42 @@
+[
+	{
+		"relative_path": ".bashrc",
+		"absolute_path": ".bashrc",
+		"type": "file"
+	},
+	{
+		"relative_path": "tmux.conf",
+		"absolute_path": ".config/tmux/tmux.conf",
+		"type": "file"
+	},
+	{
+		"relative_path": "alacritty",
+		"absolute_path": ".config/alacritty",
+		"type": "directory"
+	},
+	{
+		"relative_path": "completions",
+		"absolute_path": ".config/completions",
+		"type": "directory"
+	},
+	{
+		"relative_path": "hypr",
+		"absolute_path": ".config/hypr",
+		"type": "directory"
+	},
+	{
+		"relative_path": "nvim",
+		"absolute_path": ".config/nvim",
+		"type": "directory"
+	},
+	{
+		"relative_path": "waybar",
+		"absolute_path": ".config/waybar",
+		"type": "directory"
+	},
+  {
+    "relative_path": "wofi",
+    "absolute_path": ".config/wofi",
+    "type": "directory"
+  }
+]

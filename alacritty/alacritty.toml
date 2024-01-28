@@ -14,7 +14,6 @@ history = 100000
 multiplier = 3
 
 [window]
-opacity = 0.8
 blur = true
 class = { instance = "Alacritty", general = "Alacritty" }
 padding = { x = 15, y = 15 } 

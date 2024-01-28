@@ -1,0 +1,23 @@
+Archinstall language		English (100%)
+Mirrors > Mirrors region	Greece
+Locales				Default (Defined)
+Disk configuration // Best ext4, if single-boot OR manual /mnt, if dual-boot
+// See partitioning.txt for more details when dual booting
+Bootloader			Grub
+Swap				True
+Hostname			archlinux
+Root Password			anything (2006)
+User account			souvlaki42, password (2006), root user
+Profile 			Desktop, Hyprland, AMD
+Audio				Pulseaudio Or Pipewire
+Kernels				Default (linux)
+Additional packages 		// See additional_packages.txt
+Network configuration		Copy ISO network configuration to installation
+Timezone			Europe/Athens
+Automatic time sync (NTP)	Default (True)
+Optional repositories		Default (Nothing)
+
+// Anything else just leave defaults and press Install
+
+// Wait for everything to download
+// Select yes for chroot /mnt and go to postinstall.txt
