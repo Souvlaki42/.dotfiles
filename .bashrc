@@ -23,8 +23,7 @@ fi
 # Tmux
 if [ -x "$(command -v tmux)" ] && \
    [ -n "${DISPLAY}" ] && \
-   [ -z "${TMUX}" ] && \
-   [ "${TERM_PROGRAM}" != "vscode" ]; then
+   [ -z "${TMUX}" ]; then
     exec tmux new-session -A -s ${USER} >/dev/null 2>&1
 fi
 
@@ -33,5 +32,12 @@ alias vim="nvim"
 alias lh="ls -d .[^.]*"
 alias gs="git status"
 alias cl="clear"
-alias pacsync="pacman -Qqe > ~/dotfiles/installation/installed_packages.txt"
+alias pacsync="pacman -Qqe > ~/dotfiles/installation/installed_packages.txt && echo Pacman Synced!"
 alias neo="neofetch"
+alias fuck="sudo"
+alias pick="hyprpicker"
+
+# NVM
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion

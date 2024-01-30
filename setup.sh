@@ -3,7 +3,10 @@
 # Environment Variables
 DOTFILES_DIR="$HOME/dotfiles"
 SYMLINKS_FILE="$DOTFILES_DIR/symlinks.json"
-TPM_FLAG_FILE="$DOTFILES_DIR/.tpm_is_already_there"
+
+# Flag files for certain programs
+NVM_FLAG_FILE="$DOTFILES_DIR/flags/.nvm_is_already_here"
+TPM_FLAG_FILE="$DOTFILES_DIR/flags/.tpm_is_already_here"
 
 # Install through this file
 sudo pacman -S --needed - < "$DOTFILES_DIR/installation/installed_packages.txt"
@@ -14,8 +17,14 @@ if [ ! -e "$TPM_FLAG_FILE" ]; then
 	touch "$TPM_FLAG_FILE"
 fi
 
+# Curl NVM (Node Version Manager)
+if [ ! -e "$NVM_FLAG_FILE" ]; then
+  curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
+	touch "$NVM_FLAG_FILE"
+fi
+
 # Font
-sudo pacman -Sy ttf-jetbrains-mono-nerd
+sudo pacman -Sy --needed ttf-jetbrains-mono-nerd
 
 # Yay bin
 sudo pacman -S --needed git base-devel
@@ -24,13 +33,13 @@ git clone https://aur.archlinux.org/yay-bin.git "$HOME/.local/bin/yay-bin"
 cd "$HOME/.local/bin/yay-bin"
 makepkg -si
 cd $HOME
-yay -Sy wlogout swaylock-effects visual-studio-code-bin
+yay -Sy --needed wlogout swaylock-effects visual-studio-code-bin waybar-updates bibata-cursor-theme-bin 
 
 # Parse the JSON file and create symlinks
-for item in $(jq -c '.[]' "$SYMLINKS_FILE"); do
-    relative_path=$(echo "$item" | jq -r '.relative_path')
-    absolute_path=$(echo "$item" | jq -r '.absolute_path')
-    type=$(echo "$item" | jq -r '.type')
+for item in $(jq -c ".[]" "$SYMLINKS_FILE"); do
+    relative_path=$(echo "$item" | jq -r ".relative_path")
+    absolute_path=$(echo "$item" | jq -r ".absolute_path")
+    type=$(echo "$item" | jq -r ".type")
 
     # Prepend home to absolute path when it's not really absolute
     if [[ "$absolute_path" != /* ]]; then
@@ -38,14 +47,14 @@ for item in $(jq -c '.[]' "$SYMLINKS_FILE"); do
     fi
 
     # Ensure the directory structure exists for the file
-    mkdir -p "$(dirname "$absolute_path")"
+   sudo mkdir -p "$(dirname "$absolute_path")"
 
     if [ "$type" = "file" ]; then
-        rm -f "$absolute_path"
-        ln -s "$DOTFILES_DIR/$relative_path" "$absolute_path"
+        sudo rm -f "$absolute_path"
+        sudo ln -s "$DOTFILES_DIR/$relative_path" "$absolute_path"
     elif [ "$type" = "directory" ]; then
-        rm -rf "$absolute_path"
-        ln -s "$DOTFILES_DIR/$relative_path" "$absolute_path"
+        sudo rm -rf "$absolute_path"
+        sudo ln -s "$DOTFILES_DIR/$relative_path" "$absolute_path"
     fi
 done
 

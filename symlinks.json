@@ -38,5 +38,35 @@
     		"relative_path": "wofi",
     		"absolute_path": ".config/wofi",
     		"type": "directory"
-  	}
+  	},
+  {
+    "relative_path": ".gitconfig",
+    "absolute_path": ".gitconfig",
+    "type": "file"
+  },
+  {
+    "relative_path": "wallpaper.jpg",
+    "absolute_path": "Pictures/wallpaper.jpg",
+    "type": "file"
+  },
+  {
+    "relative_path": "pacman.conf",
+    "absolute_path": "/etc/pacman.conf",
+    "type": "file"
+  },
+  {
+    "relative_path": "wlogout",
+    "absolute_path": ".config/wlogout",
+    "type": "directory"
+  },
+  {
+    "relative_path": "gtk-3.0",
+    "absolute_path": ".config/gtk-3.0",
+    "type": "directory"
+  },
+  {
+    "relative_path": ".icons",
+    "absolute_path": ".icons",
+    "type": "directory"
+  }
 ]
