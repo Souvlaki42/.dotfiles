@@ -7,6 +7,9 @@ SYMLINKS_FILE="$DOTFILES_DIR/symlinks.json"
 # Flag files for certain programs
 NVM_FLAG_FILE="$DOTFILES_DIR/flags/.nvm_is_already_here"
 TPM_FLAG_FILE="$DOTFILES_DIR/flags/.tpm_is_already_here"
+BUN_FLAG_FILE="$DOTFILES_DIR/flags/.bun_is_already_here"
+RUST_FLAG_FILE="$DOTFILES_DIR/flags/.rust_is_already_here"
+BASH_FLAG_FILE="$DOTFILES_DIR/flags/.bash_is_already_here"
 
 # Install through this file
 sudo pacman -S --needed - < "$DOTFILES_DIR/installation/installed_packages.txt"
@@ -21,6 +24,24 @@ fi
 if [ ! -e "$NVM_FLAG_FILE" ]; then
   curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
 	touch "$NVM_FLAG_FILE"
+fi
+
+# Curl Bun
+if [ ! -e "$BUN_FLAG_FILE" ]; then
+  curl -fsSL https://bun.sh/install | bash
+  touch "$BUN_FLAG_FILE"
+fi
+
+# Curl Rust
+if [ ! -e "$RUST_FLAG_FILE" ]; then
+  curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+  touch "$RUST_FLAG_FILE"
+fi
+
+# Curl OhMyBash
+if [ ! -e "$BASH_FLAG_FILE" ]; then
+  bash -c "$(curl -fsSL https://raw.githubusercontent.com/ohmybash/oh-my-bash/master/tools/install.sh)"
+  touch "$BASH_FLAG_FILE"
 fi
 
 # Font

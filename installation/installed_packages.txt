@@ -6,7 +6,7 @@ bibata-cursor-theme-bin
 blueman
 bluez
 bluez-utils
-copyq
+cliphist
 dolphin
 dunst
 efibootmgr
@@ -37,6 +37,7 @@ networkmanager
 ntfs-3g
 nwg-look
 os-prober
+pavucontrol
 pipewire
 pipewire-alsa
 pipewire-jack
@@ -54,6 +55,7 @@ thunar
 tmux
 ttf-font-awesome
 ttf-jetbrains-mono-nerd
+unzip
 vim
 visual-studio-code-bin
 vulkan-radeon

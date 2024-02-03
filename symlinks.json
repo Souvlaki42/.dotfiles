@@ -55,11 +55,6 @@
     "type": "file"
   },
   {
-    "relative_path": "wlogout",
-    "absolute_path": ".config/wlogout",
-    "type": "directory"
-  },
-  {
     "relative_path": "gtk-3.0",
     "absolute_path": ".config/gtk-3.0",
     "type": "directory"

@@ -1,9 +1,19 @@
+-- "Include" keymap set function
 local map = vim.keymap.set
 
+-- Go back to netrw
 map("n", "<leader>pv", vim.cmd.Ex)
 
-map({ "n", "v" }, "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
+-- Find and replace
+map({ "n", "v" }, "<leader>fr", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
+
+-- Make script executable
 map("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true, desc = "Make executable" })
+
+-- Quick save file(s)
+
+map("n", "<leader>s", ":w<CR>")
+map("n", "<leader>S", ":wa<CR>")
 
 -- Move line(s) up and down
 map("n", "<A-j>", ":m .-2<CR>==", {desc="Move line up"})
