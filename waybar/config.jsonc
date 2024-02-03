@@ -65,7 +65,7 @@
       "on-click": "alacritty -e htop"
     },
     "network": {
-        "format": "{ipaddr}/{cidr}",
+        "format": "{ipaddr}",
         "tooltip-format-wifi": "{essid} ({signalStrength}%)  ",
         // "format-wifi": "{essid} ({signalStrength}%)  ",
         "format-ethernet": "{ipaddr}/{cidr} ",
@@ -73,7 +73,6 @@
         "format-linked": "{ifname} (No IP) ",
         "format-disconnected": "Disconnected ⚠",
         "format-alt": "{ifname}: {ipaddr}/{cidr}",
-        "on-click": "alacritty -e iwctl"
     },
     // Pulseaudio
       "pulseaudio": {

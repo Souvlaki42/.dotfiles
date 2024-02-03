@@ -17,11 +17,8 @@ parse_git_branch() {
         echo -e "(\033[31m$branch\033[0m)"
     fi
 }
-if command -v __git_ps1 &>/dev/null; then
-    PS1='\[\033[01;34m\]\w\[\033[00m\] $(parse_git_branch) \[\033[01;32m\]>\[\033[00m\] '
-else
-    PS1='\[\033[01;34m\]\w \[\033[01;32m\]>\[\033[00m\] '
-fi
+PS1='\[\033[01;34m\]\w\[\033[00m\]$(parse_git_branch) \[\033[01;32m\]>\[\033[00m\] '
+
 # Tmux
 if [ -x "$(command -v tmux)" ] && \
    [ -n "${DISPLAY}" ] && \
