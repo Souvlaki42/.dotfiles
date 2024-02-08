@@ -1,8 +1,9 @@
 {
     "layer": "top", // Waybar at top layer
     "spacing": 4, // Gaps between modules (4px)
+    "modules-left": ["clock"],
     "modules-center": ["hyprland/workspaces"],
-    "modules-right": ["custom/pacman", "bluetooth", "pulseaudio", "network", "cpu", "memory", "disk", "hyprland/language", "clock", "custom/exit", "tray"],
+    "modules-right": ["custom/pacman", "bluetooth", "pulseaudio", "network", "custom/exit", "tray"],
     // Modules configuration
     "custom/exit": {
       "format": "",
@@ -21,10 +22,10 @@
             "sort-by-number": true 
         }
     },
-    "hyprland/language": {
-      "format": "{short}",
-      "format-alt": "{long}"
-    },
+    // "hyprland/language": {
+      // "format": "{short}",
+      // "format-alt": "{long}"
+    // },
     "keyboard-state": {
         "numlock": true,
         "capslock": true,
@@ -40,34 +41,36 @@
     },
     "clock": {
         "timezone": "Europe/Athens",
+        "tooltip": true,
+        "format": " {:%H:%M}",
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-        "format-alt": "{:%d-%m-%Y}"
+        "format-alt": " {:%d-%m-%Y}"
     },
     // CPU
-    "cpu": { 
-        "interval": 5,
-        "max-length": 10,
-        "format": "󰍛  {usage}% ",
-        "on-click": "alacritty -e htop"
-    },
+    // "cpu": { 
+        // "interval": 5,
+        // "max-length": 10,
+        // "format": "󰍛  {usage}% ",
+        // "on-click": "alacritty -e htop"
+    // },
     // Memory
-    "memory": {
-        "interval": 5,
-        "max-length": 10,
-        "format": "  {}% ",
-        "on-click": "alacritty -e htop"
-    },
+    // "memory": {
+        // "interval": 5,
+        // "max-length": 10,
+        // "format": "  {}% ",
+        // "on-click": "alacritty -e htop"
+    // },
     // Disk
-    "disk": {
-      "interval": 5,
-      "max-length": 10,
-      "format": "  {percentage_used}% ",
-      "on-click": "alacritty -e htop"
-    },
+    // "disk": {
+      // "interval": 5,
+      // "max-length": 10,
+      // "format": "  {percentage_used}% ",
+      // "on-click": "alacritty -e htop"
+    // },
     "network": {
-        "format": "{ipaddr}",
-        "tooltip-format-wifi": "{essid} ({signalStrength}%)  ",
-        // "format-wifi": "{essid} ({signalStrength}%)  ",
+        // "format": "{ipaddr}",
+        // "tooltip-format-wifi": "{essid} ({signalStrength}%)  ",
+        "format-wifi": "{essid} ({signalStrength}%)  ",
         "format-ethernet": "{ipaddr}/{cidr} ",
         "tooltip-format": "{ifname} via {gwaddr} ",
         "format-linked": "{ifname} (No IP) ",
@@ -75,8 +78,8 @@
         "format-alt": "{ifname}: {ipaddr}/{cidr}",
     },
     // Pulseaudio
-      "pulseaudio": {
-        "format": "{icon} {volume}%",
+    "pulseaudio": {
+        "format": "{volume}% {icon} {format_source}",
         "format-bluetooth": "{volume}% {icon} {format_source}",
         "format-bluetooth-muted": " {icon} {format_source}",
         "format-muted": " {format_source}",
@@ -89,7 +92,7 @@
             "phone": "",
             "portable": "",
             "car": "",
-            "default": ["", " ", " "]
+            "default": ["  ", "  ", "  "]
         },
         "on-click": "pavucontrol"
     },

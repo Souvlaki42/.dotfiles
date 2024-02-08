@@ -1,1 +1,3 @@
-flags/*
+flags
+setup-2.sh
+.config/tmux/plugins

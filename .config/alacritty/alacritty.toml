@@ -2,12 +2,15 @@ import = [
   "~/.config/alacritty/catppuccin-mocha.toml"
 ]
 
+live_config_reload = true
+
 [font]
 normal = { family = "JetBrains Mono Nerd Font", style = "Medium" }
 bold = { family = "JetBrains Mono Nerd Font", style = "Bold" }
 italic = { family = "JetBrains Mono Nerd Font", style = "MediumItalic" }
 bold_italic = { family = "JetBrains Mono Nerd Font", style = "BoldItalic" }
-size = 14
+glyph_offset = { x = 0, y = 0 } 
+size = 15
 
 [scrolling]
 history = 100000
@@ -17,18 +20,36 @@ multiplier = 3
 blur = true
 class = { instance = "Alacritty", general = "Alacritty" }
 padding = { x = 15, y = 15 } 
+dimensions = { columns = 160, lines = 80 }
 dynamic_padding = true
 opacity = 0.9
-dynamic_title = false
-title = "Alacritty"
 resize_increments = true
+decorations = "full"
+dynamic_title = true
+startup_mode = "Maximized"
 decorations_theme_variant = "Dark"
 
 [cursor]
-style = { shape = "Beam", blinking = "Always" }
+style = { shape = "Beam", blinking = "off" }
 
 [mouse]
 hide_when_typing = true
 
 [env]
 TERM = "xterm-256color"
+DOTFILES_DIR = "/home/souvlaki42/dotfiles"
+PROMPT = "%F{blue}%~%f %F{green}>%f "
+EDITOR = "nvim"
+
+[selection]
+semantic_escape_chars = ",│`|:\"' ()[]{}<>"
+
+[colors]
+draw_bold_text_with_bright_colors = true
+
+[bell]
+animation = "EaseOutExpo"
+duration = 0
+
+[shell]
+program = "/usr/bin/zsh"

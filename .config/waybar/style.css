@@ -128,7 +128,7 @@ tooltip label {
 	animation-timing-function: linear;
 	animation-iteration-count: infinite;
 	animation-direction: alternate;
-  background-color: #3498db;
+  background-color: #fab387;
 }
 
 #custom-pacman.pending-updates {
