@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/zsh
 
 function gs() {
   if [ -d .git ] || git rev-parse --is-inside-work-tree > /dev/null 2>&1; then

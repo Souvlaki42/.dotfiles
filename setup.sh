@@ -4,6 +4,7 @@
 cd ~/dotfiles/
 stow .
 stow -t /etc etc
+chsh /usr/bin/zsh
 
 # Install pacman packages
 if [[ -f "./installation/installed_packages.txt" ]]; then

@@ -1,7 +1,7 @@
 alacritty
 bluez
 bluez-utils
-dolphin
+thunar
 firefox
 git
 grub
@@ -17,5 +17,9 @@ ttf-font-awesome
 vim
 waybar
 wireless_tools
-wofi
+rofi
 jq
+stow
+ripgrep
+fd
+zsh

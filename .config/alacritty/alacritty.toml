@@ -35,12 +35,6 @@ style = { shape = "Beam", blinking = "off" }
 [mouse]
 hide_when_typing = true
 
-[env]
-TERM = "xterm-256color"
-DOTFILES_DIR = "/home/souvlaki42/dotfiles"
-PROMPT = "%F{blue}%~%f %F{green}>%f "
-EDITOR = "nvim"
-
 [selection]
 semantic_escape_chars = ",│`|:\"' ()[]{}<>"
 

@@ -16,6 +16,11 @@ window#waybar.hidden {
   opacity: 0.5;
 }
 
+#window {
+  font-weight: bold;
+  margin-left: .5rem;
+}
+
 #workspaces {
   background-color: transparent;
 }
