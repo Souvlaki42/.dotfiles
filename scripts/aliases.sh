@@ -1,4 +1,6 @@
-#!/bin/zsh
+#!/usr/bin/zsh
+
+alias update="sudo pacman --noconfirm -Syu && yay -Syu"
 
 alias ls="ls --color=auto"
 alias la="ls -a --color=auto"
