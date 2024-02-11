@@ -1,0 +1,10 @@
+[Trigger]
+Operation = Install
+Operation = Upgrade
+Operation = Remove
+Type = Package
+
+[Action]
+Description = Update package list in dotfiles repository
+When = PostTransaction
+Exec = sudo /etc/pacman.d/hooks/packages.sh

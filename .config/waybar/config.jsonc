@@ -1,8 +1,8 @@
 {
     "layer": "top", // Waybar at top layer
     "spacing": 4, // Gaps between modules (4px)
-    "modules-left": ["clock", "hyprland/window"],
-    "modules-center": ["hyprland/workspaces"],
+    "modules-left": ["clock", "hyprland/workspaces"],
+    "modules-center": ["hyprland/window"],
     "modules-right": ["custom/pacman", "bluetooth", "pulseaudio", "network", "custom/exit", "tray"],
     // Modules configuration
     "custom/exit": {
