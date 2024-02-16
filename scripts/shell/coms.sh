@@ -1,4 +1,4 @@
-#!/bin/zsh
+#!/usr/bin/zsh
 
 function gs() {
   if [ -d .git ] || git rev-parse --is-inside-work-tree > /dev/null 2>&1; then
@@ -17,19 +17,11 @@ function rmd() {
     rm -rf "$target"/{*,.[!.]*,..?*}
 }
 
-function cdd ()
-{
-  if [[ -v DOTFILES_DIR ]]; then
-    ENV_EXISTS=true
+function havei() {
+  package=$1
+  if $(pacman -Qi $package &>/dev/null); then
+    echo -e "\e[92m[ ✔️ ] $package is installed \e[39m"
   else
-    ENV_EXISTS=false
+    echo -e "\e[91m[ ❌] $package is not installed \e[39m"
   fi
-
-  if [[ ENV_EXISTS = true ]]; then
-    if [[ ! -d $DOTFILES_DIR ]]; then
-      mkdir "$DOTFILES_DIR"
-    fi
-  fi
-
-  echo $ENV_EXISTS
 }

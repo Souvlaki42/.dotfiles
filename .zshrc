@@ -1,19 +1,36 @@
-# This is the start of my zshrc configuration file in Arch Linux
+# This is the start of my ~/.zshrc configuration file in Arch Linux
 
 # Environment variables
-TERM="xterm-256color"
-DOTFILES_DIR="$HOME/dotfiles"
-PROMPT="%F{blue}%~%f %F{green}>%f "
-EDITOR="nvim"
+export DOTFILES_DIR="$HOME/dotfiles"
+export TERM="xterm-256color"
+export PROMPT="%F{blue}%~%f %F{green}>%f "
+export EDITOR="nvim"
 
-# Aliases
-source "$DOTFILES_DIR/scripts/aliases.sh"
+# Zoxide
+eval "$(zoxide init --cmd cd zsh)"
 
-# Commands
-source "$DOTFILES_DIR/scripts/commands.sh"
+# Shell
+for file in $DOTFILES_DIR/scripts/shell/*; do
+  if [ -f "$file" ]; then
+    source "$file" || echo "Failed to source $file"
+  fi
+done
 
-# Paths
-source "$DOTFILES_DIR/scripts/paths.sh"
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
-# TMUX
-source "$DOTFILES_DIR/scripts/tmux.sh"
+# pnpm
+export PNPM_HOME="/home/souvlaki42/.local/share/pnpm"
+case ":$PATH:" in
+  # *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end
+
+# bun completions
+[ -s "/home/souvlaki42/.bun/_bun" ] && source "/home/souvlaki42/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"

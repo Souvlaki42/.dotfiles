@@ -17,6 +17,8 @@ window#waybar.hidden {
 }
 
 #window {
+  color: #fff;
+  opacity: 0.8;
   font-weight: bold;
   margin-left: .5rem;
 }
