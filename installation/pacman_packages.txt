@@ -13,6 +13,7 @@ fd
 firefox
 fzf
 git
+github-cli
 go
 grim
 grub
@@ -43,7 +44,6 @@ pipewire-pulse
 qt5-wayland
 qt6-wayland
 ripgrep
-rofi
 rofi-calc
 rofi-emoji
 sddm

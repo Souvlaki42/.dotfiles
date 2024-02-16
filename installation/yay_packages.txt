@@ -5,6 +5,8 @@ hyprpicker-debug 0.2.0-2
 quickemu 4.9.2-1
 rofi-lbonn-wayland 1.7.5+wayland2-1
 rofi-lbonn-wayland-debug 1.7.5+wayland2-1
+sddm-sugar-dark 1.2-1
+spotify 1:1.2.26.1187-1
 swaylock-effects 1.7.0.0-4
 swaylock-effects-debug 1.7.0.0-4
 waybar-updates 0.3.0-1
