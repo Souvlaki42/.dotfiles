@@ -7,9 +7,6 @@ export TERM="xterm-256color"
 export PROMPT="%F{blue}%~%f %F{green}>%f "
 export EDITOR="nvim"
 
-# Zoxide
-eval "$(zoxide init --cmd cd zsh)"
-
 # Shell
 for file in $DOTFILES_DIR/scripts/shell/*; do
   if [ -f "$file" ]; then
@@ -17,21 +14,10 @@ for file in $DOTFILES_DIR/scripts/shell/*; do
   fi
 done
 
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+source $DOTFILES_DIR/scripts/deps.sh
 
-# pnpm
-export PNPM_HOME="/home/souvlaki42/.local/share/pnpm"
-case ":$PATH:" in
-  # *":$PNPM_HOME:"*) ;;
-  *) export PATH="$PNPM_HOME:$PATH" ;;
-esac
-# pnpm end
+# Compinit
+compinit
 
-# bun completions
-[ -s "/home/souvlaki42/.bun/_bun" ] && source "/home/souvlaki42/.bun/_bun"
-
-# bun
-export BUN_INSTALL="$HOME/.bun"
-export PATH="$BUN_INSTALL/bin:$PATH"
+# Zoxide
+eval "$(zoxide init --cmd cd zsh)"

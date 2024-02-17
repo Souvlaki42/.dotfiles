@@ -41,6 +41,8 @@ pipewire
 pipewire-alsa
 pipewire-jack
 pipewire-pulse
+qt5-graphicaleffects
+qt5-quickcontrols2
 qt5-wayland
 qt6-wayland
 ripgrep

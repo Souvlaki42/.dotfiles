@@ -21,6 +21,7 @@ window#waybar.hidden {
   opacity: 0.8;
   font-weight: bold;
   margin-left: .5rem;
+  margin-right: 5rem;
 }
 
 #workspaces {
