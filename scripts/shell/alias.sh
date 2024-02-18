@@ -20,8 +20,7 @@ alias pick="hyprpicker"
 alias tkill="tmux kill-server"
 
 # Git
-alias gcl="git clone"
+alias gc="git clone"
 alias gpl="git pull"
-alias ga="git add -A"
-alias gc="git commit -m"
+alias gca="git commit -a -m"
 alias gp="git push"
