@@ -20,6 +20,6 @@ sudo systemctl enable bluetooth.service
 sudo systemctl start bluetooth.service
 reboot
 ```
-3. Do:
+Then just:
 Open terminal. Wait for all the first time scripts to do what they have to do.\
 Then restart terminal. Do whatever else needed. Update this README.md accordingly.
