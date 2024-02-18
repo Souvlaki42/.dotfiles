@@ -1,29 +1,51 @@
 #!/usr/bin/zsh
 
-function ipac() {
-  local package="$1"
-  sudo pacman --needed -Sy $package
-  sudo pacman -Qqen > "$DOTFILES_DIR/installation/pacman_packages.txt"
-  echo "Packages synced!"
+export PARU_HOME="$HOME/.local/share/paru"
+
+if [ ! -d "$PARU_HOME" ]; then
+  sudo pacman -S --needed base-devel
+  git clone https://aur.archlinux.org/paru.git $PARU_HOME
+  cd $PARU_HOME
+  makepkg -si
+fi
+
+function foundit() {
+  local package_file="$DOTFILES_DIR/installation/packages.txt"
+  if [[ -f "$package_file" ]]; then
+    while read -r package; do
+      sudo paru -Sy "$package" || {
+        echo "Failed to install package: $package"
+      }
+    done < "$package_file"
+    echo "Packages were restored successfully!"
+  else
+    echo "Package file not found: $package_file"
+    return 1
+  fi
 }
 
-function rpac() {
-  local package="$1"
-  sudo pacman -Runs $package
-  sudo pacman -Qqen > "$DOTFILES_DIR/installation/pacman_packages.txt"
-  echo "Packages synced!"
+function remember() {
+  if [[ -v DOTFILES_DIR ]]; then
+    { paru -Qqen; paru -Qm; } > "$DOTFILES_DIR/installation/packages.txt"
+    echo "Packages were installed and synced successfully!"
+  else
+    echo "There is no package logs. Sorry!"
+  fi
 }
 
-function iyay() {
-  local package="$1"
-  yay --needed -Sy $package
-  yay -Qm > "$DOTFILES_DIR/installation/yay_packages.txt"
-  echo "Packages synced!"
+function news() {
+  sudo paru -Syu
+  remember
 }
 
-function ryay() {
-  local package="$1"
-  yay -Runs $package
-  yay -Qm > "$DOTFILES_DIR/installation/yay_packages.txt"
-  echo "Packages synced!"
+function yay() {
+  local packages="$@"
+  sudo paru -Sy $packages
+  remember
+}
+
+function yeet() {
+  local packages="$@"
+  sudo paru -Runs $packages
+  remember
 }

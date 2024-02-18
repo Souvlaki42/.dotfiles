@@ -1,8 +1,8 @@
 .git
 .gitignore
 scripts
+system
 installation
-flags
 README.md
-setup.sh
-setup-2.sh
+shell.sh
+.stow-local-ignore
