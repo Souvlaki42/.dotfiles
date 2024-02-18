@@ -39,13 +39,11 @@ function news() {
 }
 
 function yay() {
-  local packages="$@"
-  sudo paru -Sy $packages
+  sudo paru --needed -Sy $@
   remember
 }
 
 function yeet() {
-  local packages="$@"
-  sudo paru -Runs $packages
+  sudo paru -Runs $@
   remember
 }

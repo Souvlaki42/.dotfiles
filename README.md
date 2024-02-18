@@ -8,6 +8,7 @@ My configuration repository for Arch Linux based installations.
 1. Install latest Arch Linux version using docs inside the installation folder.
 2. Run:
 ```bash
+chsh
 git clone https://github.com/Souvlaki42/dotfiles.git ~/dotfiles
 cd ~/dotfiles
 stow .
