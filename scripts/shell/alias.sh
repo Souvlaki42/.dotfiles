@@ -2,7 +2,6 @@
 
 # System
 alias shell="source ~/.zshrc"
-alias update-grub="sudo grub-mkconfig -o /boot/grub/grub.cfg"
 alias cl="clear"
 
 # Listings
