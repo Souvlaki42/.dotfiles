@@ -2,7 +2,6 @@
 
 # System
 alias shell="source ~/.zshrc"
-alias dot="$EDITOR $DOTFILES_DIR"
 alias update-grub="sudo grub-mkconfig -o /boot/grub/grub.cfg"
 alias cl="clear"
 

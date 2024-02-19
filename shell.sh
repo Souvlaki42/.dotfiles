@@ -2,10 +2,18 @@
 
 # Shell
 for file in $DOTFILES_DIR/scripts/shell/*; do
-  if [ -f "$file" ]; then
+  if [[ -f "$file" ]]; then
     source "$file" || echo "Failed to source $file"
   fi
 done
+
+# History search
+autoload -Uz up-line-or-beginning-search down-line-or-beginning-search
+zle -N up-line-or-beginning-search
+zle -N down-line-or-beginning-search
+
+[[ -n "${key[Up]}"   ]] && bindkey -- "${key[Up]}"   up-line-or-beginning-search
+[[ -n "${key[Down]}" ]] && bindkey -- "${key[Down]}" down-line-or-beginning-search
 
 # pnpm
 case ":$PATH:" in

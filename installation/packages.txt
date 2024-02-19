@@ -18,6 +18,8 @@ go
 grim
 grub
 gst-plugin-pipewire
+gst-plugins-bad
+gst-plugins-good
 htop
 hyprland
 hyprpaper
@@ -42,6 +44,7 @@ pipewire-alsa
 pipewire-jack
 pipewire-pulse
 python-pip
+python-pipenv
 python-pynvim
 qt5-graphicaleffects
 qt5-quickcontrols2
