@@ -27,7 +27,7 @@ function foundit() {
 function remember() {
   if [[ -v DOTFILES_DIR ]]; then
     { paru -Qqen; paru -Qm; } > "$DOTFILES_DIR/installation/packages.txt"
-    echo "Packages were installed and synced successfully!"
+    echo "Packages were synced successfully!"
   else
     echo "There is no package logs. Sorry!"
   fi

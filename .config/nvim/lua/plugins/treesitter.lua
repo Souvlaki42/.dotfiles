@@ -9,6 +9,9 @@ return {
         highlight = { enable = true },
         indent = { enable = true },
       })
+      vim.filetype.add({
+        pattern = { [".*/hyprland%.conf"] = "hyprlang" },
+      })
     end,
   },
   {
@@ -18,6 +21,6 @@ return {
     dependencies = {
       "nvim-treesitter/nvim-treesitter",
     },
-    build = ":TSInstall! pkl"
+    build = ":TSInstall! pkl",
   },
 }

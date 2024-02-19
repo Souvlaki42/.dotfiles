@@ -1,10 +1,10 @@
-alacritty
 amd-ucode
 base
 base-devel
 bluez
 bluez-utils
 cliphist
+cmake
 cmatrix
 dolphin
 dunst
@@ -22,7 +22,7 @@ gst-plugins-bad
 gst-plugins-good
 htop
 hyprland
-hyprpaper
+hyprlang
 iwd
 jq
 kitty
@@ -35,6 +35,7 @@ neofetch
 neovim
 network-manager-applet
 networkmanager
+ninja
 ntfs-3g
 nwg-look
 os-prober
@@ -54,6 +55,7 @@ ripgrep
 rofi-calc
 rofi-emoji
 rustup
+sdbus-cpp
 sddm
 slurp
 smartmontools
@@ -74,7 +76,6 @@ wireless_tools
 wireplumber
 wofi
 xdg-desktop-portal-gtk
-xdg-desktop-portal-hyprland
 xdg-user-dirs
 xdg-utils
 xf86-video-amdgpu
@@ -92,9 +93,10 @@ paru 2.0.1-1
 paru-debug 2.0.1-1
 rofi-lbonn-wayland 1.7.5+wayland2-1
 rofi-lbonn-wayland-debug 1.7.5+wayland2-1
-spotify 1:1.2.26.1187-1
+spotify 1:1.2.26.1187-2
 swaylock-effects 1.7.0.0-4
 swaylock-effects-debug 1.7.0.0-4
 waybar-updates 0.3.0-1
 wlogout 1.1.1-3
 wlogout-debug 1.1.1-3
+xdg-desktop-portal-hyprland-git 1:r362.f62fcea-1

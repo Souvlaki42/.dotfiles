@@ -1,9 +1,6 @@
 -- "Include" keymap set function
 local map = vim.keymap.set
 
--- Go back to netrw
-map("n", "<leader>pv", vim.cmd.Ex)
-
 -- Find and replace
 map({ "n", "v" }, "<leader>fr", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
 

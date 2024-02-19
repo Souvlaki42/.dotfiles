@@ -3,7 +3,7 @@ My configuration repository for Arch Linux based installations.
 
 ## Todo
 - [ ] Update installation docs to markdown as well.
-- [ ] Fix terminal and Neovim colors.
+- [x] Fix terminal and Neovim colors.
 - [ ] Add randomly generated hyprpaper wallpapers. (?)
 
 ## How to use

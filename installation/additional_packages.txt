@@ -1,4 +1,3 @@
-alacritty
 bluez
 bluez-utils
 thunar
