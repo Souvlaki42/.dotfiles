@@ -14,16 +14,16 @@ map("v", "<A-j>", ":m '<-2<CR>gv=gv", { desc = "Move line up" })
 map("v", "<A-k>", ":m '>+1<CR>gv=gv", { desc = "Move line down" })
 
 -- Yank/Copy into system clipboard
-map("n", "<C-c>", '"+Y', { desc = "Yank line" })
-map("v", "<C-c>", '"+y', { desc = "Yank motion" })
+map("n", "<leader>y", '"+Y', { desc = "Yank line" })
+map("v", "<leader>y", '"+y', { desc = "Yank motion" })
 
 -- Delete/Cut into system clipboard
-map("n", "<C-x>", '"+D', { desc = "Delete line" })
-map("v", "<C-x>", '"+d', { desc = "Delete motion" })
+map("n", "<leader>d", '"+D', { desc = "Delete line" })
+map("v", "<leader>d", '"+d', { desc = "Delete motion" })
 
 -- Paste from system clipboard
-map("n", "<C-v>", '"+P', { desc = "Paste line" })
-map("v", "<C-v>", '"+p', { desc = "Paste motion" })
+map("n", "<leader>p", '"+P', { desc = "Paste line" })
+map("v", "<leader>p", '"+p', { desc = "Paste motion" })
 
 -- Undo and redo
 map("n", "u", ":undo<CR>", { desc = "Undo" })

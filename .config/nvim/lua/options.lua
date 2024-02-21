@@ -1,4 +1,5 @@
 vim.g.mapleader = " "
+vim.g.zoxide_use_select = true
 
 vim.opt.nu = true
 
