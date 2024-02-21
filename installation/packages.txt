@@ -3,6 +3,7 @@ base
 base-devel
 bluez
 bluez-utils
+cdrtools
 cliphist
 cmake
 cmatrix
@@ -30,6 +31,7 @@ libpulse
 libva-mesa-driver
 linux
 linux-firmware
+man-db
 nano
 neofetch
 neovim
@@ -59,15 +61,19 @@ sdbus-cpp
 sddm
 slurp
 smartmontools
+spice-gtk
 stow
 swayimg
+swtpm
 thunar
+tldr
 tmux
 tree
 ttf-font-awesome
 ttf-jetbrains-mono-nerd
 ttf-joypixels
 unzip
+usbutils
 vim
 vulkan-radeon
 waybar
@@ -85,12 +91,15 @@ xorg-xinit
 zoxide
 zram-generator
 zsh
+zsync
 bibata-cursor-theme-bin 2.0.6-1
 flutter-debug 3.16.9-1
 hyprpicker 0.2.0-2
 hyprpicker-debug 0.2.0-2
 paru 2.0.1-1
 paru-debug 2.0.1-1
+quickemu-git 4.9.2.r0.g0c8e1a5-1
+quickgui-bin 1.2.8-1
 rofi-lbonn-wayland 1.7.5+wayland2-1
 rofi-lbonn-wayland-debug 1.7.5+wayland2-1
 spotify 1:1.2.26.1187-2

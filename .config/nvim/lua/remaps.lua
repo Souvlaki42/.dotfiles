@@ -2,7 +2,7 @@
 local map = vim.keymap.set
 
 -- Find and replace
-map({ "n", "v" }, "<leader>fr", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
+map({ "n", "v" }, "<leader>su", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
 
 -- Make script executable
 map("n", "<leader>ex", "<cmd>!chmod +x %<CR>", { silent = true, desc = "Make executable" })
