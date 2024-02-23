@@ -3,6 +3,7 @@ base
 base-devel
 bluez
 bluez-utils
+btop
 cdrtools
 cliphist
 cmake
@@ -24,6 +25,7 @@ gst-plugins-good
 htop
 hyprland
 hyprlang
+hyprpaper
 iwd
 jq
 kitty
@@ -82,6 +84,7 @@ wireless_tools
 wireplumber
 wofi
 xdg-desktop-portal-gtk
+xdg-desktop-portal-hyprland
 xdg-user-dirs
 xdg-utils
 xf86-video-amdgpu
@@ -102,10 +105,9 @@ quickemu-git 4.9.2.r0.g0c8e1a5-1
 quickgui-bin 1.2.8-1
 rofi-lbonn-wayland 1.7.5+wayland2-1
 rofi-lbonn-wayland-debug 1.7.5+wayland2-1
-spotify 1:1.2.26.1187-2
+spotify 1:1.2.31.1205-2
 swaylock-effects 1.7.0.0-4
 swaylock-effects-debug 1.7.0.0-4
 waybar-updates 0.3.0-1
 wlogout 1.1.1-3
 wlogout-debug 1.1.1-3
-xdg-desktop-portal-hyprland-git 1:r362.f62fcea-1

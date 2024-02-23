@@ -6,12 +6,6 @@ return {
 			{
 				"nvim-lua/plenary.nvim",
 				"nvim-telescope/telescope-ui-select.nvim",
-				{
-					"nvim-telescope/telescope-live-grep-args.nvim",
-					-- This will not install any breaking changes.
-					-- For major updates, this must be adjusted manually.
-					version = "^1.0.0",
-				},
 				{ "nvim-telescope/telescope-fzf-native.nvim", build = "make" },
 			},
 		},
@@ -35,23 +29,15 @@ return {
 				},
 			})
 
-      telescope.load_extension("ui-select")
-      telescope.load_extension("live_grep_args")
-      telescope.load_extension("fzf")
+			telescope.load_extension("ui-select")
+			telescope.load_extension("fzf")
 
-			vim.keymap.set("n", "<leader>ff", builtin.find_files, { desc = "Find Files" })
-			vim.keymap.set(
-				"n",
-				"<leader>fg",
-				"<cmd>lua require('telescope').extensions.live_grep_args.live_grep_args()<CR>",
-				{ desc = "Live Grep" }
-			)
-			vim.keymap.set(
-				"n",
-				"<leader>fc",
-				'<cmd>lua require("telescope.builtin").live_grep({ glob_pattern = "!{spec,test}"})<CR>',
-				{ desc = "Live Grep Code" }
-			)
+			vim.keymap.set("n", "<leader>ff", builtin.find_files, { desc = "Find files" })
+			vim.keymap.set("n", "<leader>lg", builtin.live_grep, { desc = "Live grep" })
+      vim.keymap.set("n", "<leader>ol", builtin.oldfiles, { desc = "Old files" })
+			vim.keymap.set("n", "<leader>man", builtin.man_pages, { desc = "Man pages" })
+			vim.keymap.set("n", "<leader>key", builtin.keymaps, { desc = "Keymaps (N)" })
+			vim.keymap.set("n", "<leader>gs", builtin.git_status, { desc = "Git status" })
 		end,
 	},
 }
