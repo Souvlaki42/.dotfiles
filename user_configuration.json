@@ -1,0 +1,94 @@
+{
+    "additional-repositories": [],
+    "archinstall-language": "English",
+    "audio_config": {
+        "audio": "pulseaudio"
+    },
+    "bootloader": "Grub",
+    "config_version": "2.7.1",
+    "debug": false,
+    "disk_config": {
+        "config_type": "pre_mounted_config",
+        "mountpoint": "/mnt"
+    },
+    "hostname": "archlinux",
+    "kernels": [
+        "linux"
+    ],
+    "locale_config": {
+        "kb_layout": "us",
+        "sys_enc": "UTF-8",
+        "sys_lang": "en_US"
+    },
+    "mirror_config": {
+        "custom_mirrors": [],
+        "mirror_regions": {
+            "Greece": [
+                "https://repo.greeklug.gr/data/pub/linux/archlinux/$repo/os/$arch",
+                "http://ftp.otenet.gr/linux/archlinux/$repo/os/$arch",
+                "http://ftp.ntua.gr/pub/linux/archlinux/$repo/os/$arch",
+                "http://ftp.cc.uoc.gr/mirrors/linux/archlinux/$repo/os/$arch"
+            ]
+        }
+    },
+    "network_config": {
+        "type": "iso"
+    },
+    "no_pkg_lookups": false,
+    "ntp": true,
+    "offline": false,
+    "packages": [
+        "bluez",
+        "bluez-utils",
+        "thunar",
+        "firefox",
+        "git",
+        "grub",
+        "hyprpaper",
+        "nano",
+        "neofetch",
+        "cmatrix",
+        "neovim",
+        "networkmanager",
+        "network-manager-applet",
+        "ntfs-3g",
+        "os-prober",
+        "ttf-font-awesome",
+        "ttf-jetbrains-mono-nerd",
+        "waybar",
+        "wireless_tools",
+        "rofi",
+        "jq",
+        "stow",
+        "ripgrep",
+        "fd",
+        "zsh",
+        "btop",
+        "ly",
+        "tmux"
+    ],
+    "parallel downloads": 0,
+    "profile_config": {
+        "gfx_driver": "AMD / ATI (open-source)",
+        "greeter": "ly",
+        "profile": {
+            "custom_settings": {
+                "Hyprland": {
+                    "seat_access": "polkit"
+                }
+            },
+            "details": [
+                "Hyprland"
+            ],
+            "main": "Desktop"
+        }
+    },
+    "script": "guided",
+    "silent": false,
+    "skip_ntp": false,
+    "skip_version_check": false,
+    "swap": true,
+    "timezone": "Europe/Athens",
+    "uki": false,
+    "version": "2.7.1"
+}

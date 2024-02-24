@@ -8,4 +8,4 @@ export PROMPT="%F{blue}%~%f %F{green}>%f "
 export EDITOR="nvim"
 
 # Source everything else
-source "$DOTFILES_DIR/shell.sh"
+source "$DOTFILES_DIR/scripts/shell.sh"

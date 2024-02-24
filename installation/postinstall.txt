@@ -1,9 +1,0 @@
-Enable os probing in /etc/default/grub
-grub-mkconfig -o /boot/grub/grub.cfg
-mkdir ~/Pictures ~/Downloads
-reboot
-
-// Download the github repo for my dotfiles
-git clone https://github.com/Souvlaki42/dotfiles.git ~/dotfiles
-cd ~/dotfiles
-./setup.sh
