@@ -33,6 +33,7 @@ libpulse
 libva-mesa-driver
 linux
 linux-firmware
+ly
 man-db
 nano
 neofetch
@@ -60,7 +61,6 @@ rofi-calc
 rofi-emoji
 rustup
 sdbus-cpp
-sddm
 slurp
 smartmontools
 spice-gtk

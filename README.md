@@ -29,5 +29,9 @@ Then restart terminal. Do whatever else needed. Update this README.md accordingl
 
 ## Custom GRUB theme
 (Your videoinfo resolution propably is 1920x1080)\
-Follow <https://www.youtube.com/watch?v=Y-TQJYJ8g-U>.\
+Follow <https://www.youtube.com/watch?v=Y-TQJYJ8g-U>\
 Use <https://www.gnome-look.org/p/1307852/>.
+
+## Custom display manager
+(Default is SDDM)\
+Follow <https://www.youtube.com/watch?v=CpwJuHhUxEY>\

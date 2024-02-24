@@ -11,7 +11,7 @@ alias ll="ls -al"
 alias grep="grep --color=auto"
 
 # Apps
-alias vim="$EDITOR ."
+alias vim="$EDITOR"
 alias neo="neofetch"
 alias mat="cmatrix"
 alias task="btop"
