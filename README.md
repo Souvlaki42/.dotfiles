@@ -62,16 +62,16 @@ mount /dev/<efi_partition> /mnt/boot # Mount efi_partition to /mnt/boot.
 3. Run the archinstall script using my pre-defined configuration:
 ```bash
 # Archinstall is the pre-installed install script for Arch Linux. Supply it with the pre-defined configuration file in my GitHub repo or configure manually.
-archinstall --config \e[1;32mhttps://raw.githubusercontent.com/Souvlaki42/dotfiles/main/user_configuration.json\e[0m
-# \e[1;31mDONT FORGET\e[0m, to set up a user account.
-# \e[1;31mOPTIONALY\e[0m, you can set up a root password as well.
-# \e[1;31mOPTIONALY\e[0m, you can make any other changes you want. (If you change anything else, please save new user configuration to /mnt/root or somewhere else)
+archinstall --config $${\color{green}https://raw.githubusercontent.com/Souvlaki42/dotfiles/main/user_configuration.json$$
+# $${\color{red}DONT FORGET$$, to set up a user account.
+# $${\color{red}OPTIONALY$$, you can set up a root password as well.
+# $${\color{red}OPTIONALY$$, you can make any other changes you want. (If you change anything else, please save new user configuration to /mnt/root or somewhere else)
 # When you are done configuring, press install, wait to be done, say no to chroot, reboot and move to the next and final step.
 ```
 4. Configure the system to your liking.
 This including installing all dotfiles from the GitHub repo, fixing anything broken and making any other changes you want later while making sure README.md remains up to date. Have fun!
 ```bash
-git clone \e[1;32mhttps://github.com/Souvlaki42/dotfiles.git\e[0m ~/dotfiles
+git clone $${\color{green}https://github.com/Souvlaki42/dotfiles.git$$ ~/dotfiles
 ~/dotfiles/setup.sh
 ```
 ## Optional stuff for later
