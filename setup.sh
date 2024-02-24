@@ -10,7 +10,7 @@ cd ~/dotfiles
 stow .
 
 # Install every package which was inside your previous installations
-local package_file="~/dotfiles/packages.txt"
+local package_file="~/dotfiles/assets/packages.txt"
 if [[ -f "$package_file" ]]; then
   while read -r package; do
     sudo paru -Sy "$package" || {
@@ -37,6 +37,13 @@ timedatectl set-local-rtc 1 --adjust-system-clock
 sudo systemctl enable bluetooth.service
 sudo systemctl start bluetooth.service
 
-# Go to home and finalize
+# Go back to home
+cd ~
+
+# Cliphist rofi img binary
+curl -O https://raw.githubusercontent.com/sentriz/cliphist/master/contrib/cliphist-rofi-img
+sudo chmod +x ~/cliphist-rofi-img
+
+# Finalize setup
 echo "The setup was successfully!"
 echo "Next step: reboot"

@@ -1,8 +1,7 @@
 .git
 .gitignore
 scripts
-system
-installation
+assets
 README.md
-shell.sh
+setup.sh
 .stow-local-ignore

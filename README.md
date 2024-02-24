@@ -2,8 +2,10 @@
 My configuration repository for Arch Linux based installations.
 
 ## Todo
-- [x] Update installation docs to markdown in README.md.
+- [x] Update installation docs to markdown in README.
 - [x] Fix terminal and Neovim colors.
+- [ ] Add screenshots to README.
+- [ ] Make sure that copy images are stored in rofi clipboard manageer.
 - [ ] Add randomly generated hyprpaper wallpapers. (?)
 
 ## How to use
@@ -62,8 +64,8 @@ mount /dev/<efi_partition> /mnt/boot # Mount efi_partition to /mnt/boot.
 3. Run the archinstall script using my pre-defined configuration:
 ```bash
 # Archinstall is the pre-installed install script for Arch Linux. Supply it with the pre-defined configuration file in my GitHub repo or configure manually.
-archinstall --config https://raw.githubusercontent.com/Souvlaki42/dotfiles/main/user_configuration.json
-# DONT FORGET, to set up a user account.
+archinstall --config https://raw.githubusercontent.com/Souvlaki42/dotfiles/main/assets/user_configuration.json
+# DON'T FORGET, to set up a user account.
 # OPTIONALY, you can set up a root password as well.
 # OPTIONALY, you can make any other changes you want. (If you change anything else, please save new user configuration to /mnt/root or somewhere else)
 # When you are done configuring, press install, wait to be done, say no to chroot, reboot and move to the next and final step.
@@ -80,5 +82,5 @@ git clone https://github.com/Souvlaki42/dotfiles.git ~/dotfiles
 Follow <https://www.youtube.com/watch?v=Y-TQJYJ8g-U>\
 Use <https://www.gnome-look.org/p/1307852/>
 ### Custom display manager (Ly)
-(Default is SDDM)\
+(Default may be SDDM)\
 Follow <https://www.youtube.com/watch?v=CpwJuHhUxEY>

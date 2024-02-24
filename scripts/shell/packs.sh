@@ -11,7 +11,7 @@ fi
 
 function remember() {
   if [[ -v DOTFILES_DIR ]]; then
-    { paru -Qqen; paru -Qm; } > "$DOTFILES_DIR/packages.txt"
+    { paru -Qqen; paru -Qm; } > "$DOTFILES_DIR/assets/packages.txt"
     echo "Packages were synced successfully!"
   else
     echo "There is no package logs. Sorry!"
