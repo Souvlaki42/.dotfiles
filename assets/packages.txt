@@ -37,6 +37,7 @@ linux-firmware
 ly
 man-db
 nano
+ncdu
 neofetch
 neovim
 network-manager-applet
@@ -58,12 +59,14 @@ qt5-quickcontrols2
 qt5-wayland
 qt6-wayland
 ripgrep
+rmlint
 rofi-calc
 rofi-emoji
 rustup
 sdbus-cpp
 slurp
 smartmontools
+speedtest-cli
 spice-gtk
 stow
 swayimg
@@ -110,5 +113,5 @@ spotify 1:1.2.31.1205-2
 swaylock-effects 1.7.0.0-4
 swaylock-effects-debug 1.7.0.0-4
 waybar-updates 0.3.0-1
+wlogout 1.2-1
 wlogout-debug 1.1.1-3
-wlogout-git r86.acfd8af-1

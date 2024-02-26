@@ -15,6 +15,8 @@ alias vim="$EDITOR"
 alias neo="neofetch"
 alias mat="cmatrix"
 alias task="btop"
+alias speed="speedtest-cli"
+alias pn="pnpm"
 alias pick="hyprpicker"
 alias tkill="tmux kill-server"
 
