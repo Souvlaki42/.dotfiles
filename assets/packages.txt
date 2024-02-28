@@ -1,4 +1,5 @@
 amd-ucode
+arc-gtk-theme
 base
 base-devel
 bluez
@@ -11,6 +12,7 @@ cmatrix
 dolphin
 dunst
 efibootmgr
+elixir
 fd
 firefox
 fzf
@@ -46,6 +48,7 @@ ninja
 ntfs-3g
 nwg-look
 os-prober
+papirus-icon-theme
 pavucontrol
 pipewire
 pipewire-alsa
@@ -103,6 +106,7 @@ bibata-cursor-theme-bin 2.0.6-1
 flutter-debug 3.16.9-1
 hyprpicker 0.2.0-2
 hyprpicker-debug 0.2.0-2
+pacseek-bin 1.8.2-1
 paru 2.0.1-1
 paru-debug 2.0.1-1
 quickemu-git 4.9.2.r0.g0c8e1a5-1

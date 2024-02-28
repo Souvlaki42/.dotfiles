@@ -1,6 +1,7 @@
 #!/usr/bin/zsh
 
-function gs() {
+function gs() # Git status or not a git repository.
+{
   if [ -d .git ] || git rev-parse --is-inside-work-tree > /dev/null 2>&1; then
     git status
   else
@@ -8,16 +9,18 @@ function gs() {
   fi
 }
 
-function rmd() {
+function rmd() # Remove all directory's contents at once.
+{
     local target="$1"
 
-    # If no argument is provided, use the current directory
+    # If no argument is provided, use the current directory.
     [ -z "$target" ] && target="."
 
     rm -rf "$target"/{*,.[!.]*,..?*}
 }
 
-function havei() {
+function havei() # Check if a package is installed in my system.
+{
   package=$1
   if $(pacman -Qi $package &>/dev/null); then
     echo -e "\e[92m[ ✔️ ] $package is installed \e[39m"

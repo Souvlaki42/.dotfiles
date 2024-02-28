@@ -3,11 +3,11 @@ return {
 	opts = {
 		-- normal mode single-line comment
 		toggler = {
-			line = "<C-l>",
+			line = "<C-q>",
 		},
 		-- virtual mode multi-line comment
 		opleader = {
-			block = "<C-l>",
+			block = "<C-q>",
 		}
 	},
 	lazy = false,

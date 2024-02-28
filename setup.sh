@@ -46,4 +46,4 @@ sudo chmod +x ~/cliphist-rofi-img
 
 # Finalize setup
 echo "The setup was successfully!"
-echo "Next step: reboot"
+echo "Press enter key to reboot..." && read && reboot
