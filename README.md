@@ -7,6 +7,7 @@ My configuration repository for Arch Linux based installations.
 - [ ] Add screenshots to README.
 - [ ] Make sure that copy images are stored in rofi clipboard manager.
 - [ ] Add randomly generated hyprpaper wallpapers. (?)
+- [ ] Make and use the dots manager.
 
 ## How to use
 1. Connect to internet.
