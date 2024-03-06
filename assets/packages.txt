@@ -13,6 +13,8 @@ dolphin
 dunst
 efibootmgr
 elixir
+entr
+eza
 fd
 firefox
 fzf
@@ -26,6 +28,7 @@ gst-plugin-pipewire
 gst-plugins-bad
 gst-plugins-good
 htop
+httpie
 hyprland
 hyprlang
 hyprpaper
@@ -40,7 +43,6 @@ man-db
 nano
 ncdu
 neofetch
-neovim
 network-manager-applet
 networkmanager
 ninja
@@ -90,6 +92,7 @@ wget
 wireless_tools
 wireplumber
 wofi
+xclip
 xdg-desktop-portal-gtk
 xdg-desktop-portal-hyprland
 xdg-user-dirs
@@ -106,9 +109,11 @@ bibata-cursor-theme-bin 2.0.6-1
 flutter-debug 3.16.9-1
 hyprpicker 0.2.0-2
 hyprpicker-debug 0.2.0-2
+neovim-git 0.10.0.r2489.gb413f5d048-1
 pacseek-bin 1.8.2-1
 paru 2.0.1-1
 paru-debug 2.0.1-1
+pfetch 0.6.0-3
 quickemu-git 4.9.2.r0.g0c8e1a5-1
 quickgui-bin 1.2.8-1
 rofi-lbonn-wayland 1.7.5+wayland2-1
@@ -116,6 +121,7 @@ rofi-lbonn-wayland-debug 1.7.5+wayland2-1
 spotify 1:1.2.31.1205-2
 swaylock-effects 1.7.0.0-4
 swaylock-effects-debug 1.7.0.0-4
+tree-sitter-git 0.21.0.r62.g6756eb5c-1
 waybar-updates 0.3.0-1
 wlogout 1.2-1
 wlogout-debug 1.1.1-3

@@ -5,9 +5,10 @@ alias shell="source ~/.zshrc"
 alias cl="clear"
 
 # Listings
-alias ls="ls --color=auto"
-alias la="ls -a"
-alias ll="ls -al"
+alias ls="exa"
+alias la="exa -a"
+alias ll="exa -alh"
+alias tree="exa --tree"
 alias grep="grep --color=auto"
 
 # Apps
