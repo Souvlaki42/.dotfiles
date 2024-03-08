@@ -1,7 +1,6 @@
 .git
-.gitignore
-scripts
 assets
-README.md
-setup.sh
+scripts
+.gitignore
 .stow-local-ignore
+README.md

@@ -1,11 +1,11 @@
 amd-ucode
-arc-gtk-theme
 base
 base-devel
 bluez
 bluez-utils
 btop
 cdrtools
+chromium
 cliphist
 cmake
 cmatrix
@@ -21,35 +21,29 @@ fzf
 git
 github-cli
 go
-gobject-introspection
 grim
 grub
 gst-plugin-pipewire
-gst-plugins-bad
-gst-plugins-good
 htop
 httpie
 hyprland
-hyprlang
 hyprpaper
 iwd
 jq
 kitty
+lazygit
 libpulse
 libva-mesa-driver
 linux
 linux-firmware
-man-db
 nano
-ncdu
 neofetch
+neovim
 network-manager-applet
 networkmanager
-ninja
 ntfs-3g
 nwg-look
 os-prober
-papirus-icon-theme
 pavucontrol
 pipewire
 pipewire-alsa
@@ -57,25 +51,22 @@ pipewire-jack
 pipewire-pulse
 python-pip
 python-pipenv
-python-pynvim
 qt5-graphicaleffects
 qt5-quickcontrols2
 qt5-wayland
 qt6-wayland
 ripgrep
-rmlint
+rofi
 rofi-calc
 rofi-emoji
-rustup
-sdbus-cpp
 sddm
 slurp
 smartmontools
 speedtest-cli
-spice-gtk
 stow
+swayidle
 swayimg
-swtpm
+swaylock
 thunar
 tldr
 tmux
@@ -83,6 +74,7 @@ tree
 ttf-font-awesome
 ttf-jetbrains-mono-nerd
 ttf-joypixels
+udiskie
 unzip
 usbutils
 vim
@@ -91,12 +83,10 @@ waybar
 wget
 wireless_tools
 wireplumber
+wl-clipboard
 wofi
-xclip
-xdg-desktop-portal-gtk
 xdg-desktop-portal-hyprland
 xdg-user-dirs
-xdg-utils
 xf86-video-amdgpu
 xf86-video-ati
 xorg-server
@@ -106,22 +96,12 @@ zram-generator
 zsh
 zsync
 bibata-cursor-theme-bin 2.0.6-1
-flutter-debug 3.16.9-1
-hyprpicker 0.2.0-2
-hyprpicker-debug 0.2.0-2
-neovim-git 0.10.0.r2489.gb413f5d048-1
 pacseek-bin 1.8.2-1
+papirus-icon-theme-git 1:20240201.r16.g1e9edea071-1
 paru 2.0.1-1
 paru-debug 2.0.1-1
 pfetch 0.6.0-3
-quickemu-git 4.9.2.r0.g0c8e1a5-1
-quickgui-bin 1.2.8-1
-rofi-lbonn-wayland 1.7.5+wayland2-1
-rofi-lbonn-wayland-debug 1.7.5+wayland2-1
 spotify 1:1.2.31.1205-2
-swaylock-effects 1.7.0.0-4
-swaylock-effects-debug 1.7.0.0-4
-tree-sitter-git 0.21.0.r62.g6756eb5c-1
 waybar-updates 0.3.0-1
-wlogout 1.2-1
-wlogout-debug 1.1.1-3
+webcord-bin 4.8.0-1
+wlogout 1.2.1-1

@@ -12,15 +12,13 @@ function git_branch()
 }
 
 # Environment variables
-# Flags
 export KITTY_ENABLE_WAYLAND=1
 export MOZ_ENABLE_WAYLAND=1
-# Paths
 export DOTFILES_DIR="$HOME/dotfiles"
-# Prompt
+
 precmd() { print -rP "%F{blue}%~%f$(git_branch)" }
 export PROMPT="%F{green}❯%f "
-# Apps
+
 export EDITOR="nvim"
 
 # Shell
@@ -37,22 +35,24 @@ zle -N down-line-or-beginning-search
 [[ -n "${key[Up]}"   ]] && bindkey -- "${key[Up]}"   up-line-or-beginning-search
 [[ -n "${key[Down]}" ]] && bindkey -- "${key[Down]}" down-line-or-beginning-search
 
+# nvm
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
 # pnpm
 case ":$PATH:" in
-  # *":$PNPM_HOME:"*) ;;
+  *":$PNPM_HOME:"*) ;;
   *) export PATH="$PNPM_HOME:$PATH" ;;
 esac
 # pnpm end
 
 # bun & completions
+export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
-[ -s "$HOME/.bun/_bun" ] && source "$HOME/.bun/_bun"
-
-# nvm
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+[ -s "/home/souvlaki42/.bun/_bun" ] && source "/home/souvlaki42/.bun/_bun"
 
 # Compinit
+autoload -Uz compinit
 compinit
 
 # Zoxide

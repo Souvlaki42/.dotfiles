@@ -2,7 +2,7 @@
     "additional-repositories": [],
     "archinstall-language": "English",
     "audio_config": {
-        "audio": "pulseaudio"
+        "audio": "pipewire"
     },
     "bootloader": "Grub",
     "config_version": "2.7.1",
@@ -32,7 +32,7 @@
         }
     },
     "network_config": {
-        "type": "iso"
+        "type": "nm"
     },
     "no_pkg_lookups": false,
     "ntp": true,
@@ -42,6 +42,7 @@
         "bluez-utils",
         "thunar",
         "firefox",
+        "chromium",
         "git",
         "grub",
         "hyprpaper",
@@ -64,13 +65,14 @@
         "fd",
         "zsh",
         "btop",
-        "ly",
-        "tmux"
+        "tmux",
+        "zoxide",
+        "bat"
     ],
     "parallel downloads": 0,
     "profile_config": {
         "gfx_driver": "AMD / ATI (open-source)",
-        "greeter": "ly",
+        "greeter": "sddm",
         "profile": {
             "custom_settings": {
                 "Hyprland": {

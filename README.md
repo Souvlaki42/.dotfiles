@@ -4,10 +4,9 @@ My configuration repository for Arch Linux based installations.
 ## Todo
 - [x] Update installation docs to markdown in README.
 - [x] Fix terminal and Neovim colors.
+- [X] Make sure that copy images are stored in rofi clipboard manager.
 - [ ] Add screenshots to README.
-- [ ] Make sure that copy images are stored in rofi clipboard manager.
-- [ ] Add randomly generated hyprpaper wallpapers. (?)
-- [ ] Make and use the dots manager.
+- [ ] Add randomly generated hyprpaper wallpapers.
 
 ## How to use
 1. Connect to internet.
@@ -37,24 +36,26 @@ You can choose automatic, but this is how to do it manually:
 fdisk -l
 # Then, open partition manager tool to the disk you plan to install Arch Linux to:
 cfdisk /dev/<disk_name>
+# Delete any previous partitions you don't need now.
 # You need to manually create:
 # - An 1G EFI system partition out of free space.
 # - A <ram_size>G Linux swap partition out of free space (optional).
-# - A Linux filysystem partition with the remaining free space.
+# - A Linux filesystem partition with the remaining free space.
 # Write the changes you just did and exit the partitioning tool.
 # Next, format the partitions you just created:
 mkfs.fat -F32 /dev/<efi_partition> # Format efi_partition as fat32.
-mkfs.ext4 /dev/<filysystem_partition> # Format filysystem partition as ext4. 
+mkfs.ext4 /dev/<filesystem_partition> # Format filesystem_partition as ext4. 
 mkswap /dev/<swap_partition> # Register the swap_partition.
 swapon /dev/<swap_partition> # Enable the swap_partition.
-# Finally, mount the efi and filysystem partitions:
-mount /dev/<filysystem_partition> /mnt # Mount filysystem_partition to /mnt.
+# Finally, mount the efi and filesystem partitions (and optionally the windows one):
+mount /dev/<filesystem_partition> /mnt # Mount filesystem_partition to /mnt.
 mount /dev/<efi_partition> /mnt/boot # Mount efi_partition to /mnt/boot.
+mount /dev/<windows_partition> /mnt/windows # Mount windows_partition to /mnt/windows.
 ```
 3. Run the archinstall script:
 ```bash
 # Using my pre-defined configuration file
-archinstall --config https://raw.githubusercontent.com/Souvlaki42/dotfiles/main/user_configuration.json
+archinstall --config https://raw.githubusercontent.com/Souvlaki42/dotfiles/main/assets/user_configuration.json
 # Manual configuration
 archinstall
 # DON'T FORGET, to set up a user account.
@@ -66,12 +67,5 @@ archinstall
 This including installing all dotfiles from the GitHub repo, fixing anything broken and making any other changes you want later while making sure README.md remains up to date. Have fun!
 ```bash
 git clone https://github.com/Souvlaki42/dotfiles.git ~/dotfiles
-~/dotfiles/setup.sh
+~/dotfiles/scripts/setup.sh
 ```
-## Optional stuff for later
-### Custom GRUB theme
-(Your videoinfo resolution probably is 1920x1080)\
-Follow <https://www.youtube.com/watch?v=Y-TQJYJ8g-U>\
-Use <https://www.gnome-look.org/p/1307852/> (Tela)
-### Custom display manager
-Follow <https://www.youtube.com/watch?v=CpwJuHhUxEY> (Ly)
