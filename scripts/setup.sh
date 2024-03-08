@@ -1,16 +1,23 @@
-#!/usr/bin/bash
+#!/usr/bin/zsh
 
 # Change shell
 chsh
 
+# Dotfiles directory
+DOTFILES_DIR="$(cd "$(dirname "$0")" && cd .. && pwd)"
+
+# Write the dotfiles directory somewhere
+echo -e "#!/usr/bin/zsh\n\nexport DOTFILES_DIR=\"$DOTFILES_DIR\"" > "$HOME/.dotfiles.sh"
+echo -e "\$dotfilesDir = $DOTFILES_DIR" > "$HOME/.dotfiles.conf"
+
 # Go to dotfiles
-cd ~/dotfiles
+cd "$DOTFILES_DIR"
 
 # Create symlinks
 stow .
 
 # Install every package which was inside your previous installations
-local package_file="~/dotfiles/assets/packages.txt"
+local package_file="$DOTFILES_DIR/assets/packages.txt"
 if [[ -f "$package_file" ]]; then
   while read -r package; do
     sudo paru -Sy "$package" || {

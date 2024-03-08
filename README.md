@@ -5,8 +5,12 @@ My configuration repository for Arch Linux based installations.
 - [x] Update installation docs to markdown in README.
 - [x] Fix terminal and Neovim colors.
 - [X] Make sure that copy images are stored in rofi clipboard manager.
-- [ ] Add screenshots to README.
-- [ ] Add randomly generated hyprpaper wallpapers.
+- [X] Add randomly generated hyprpaper wallpapers.
+- [X] Add screenshots to README.
+- [ ] Generate color palletes from wallpaper. (?)
+
+## Common Issue Fixes
+After setup.sh finishes, check .dotfiles.sh and .dotfiles.conf
 
 ## How to use
 1. Connect to internet.
@@ -64,8 +68,13 @@ archinstall
 # When you are done configuring, press install, wait to be done, say no to chroot, reboot and move to the next and final step.
 ```
 4. Configure the system to your liking.
-This including installing all dotfiles from the GitHub repo, fixing anything broken and making any other changes you want later while making sure README.md remains up to date. Have fun!
 ```bash
 git clone https://github.com/Souvlaki42/dotfiles.git ~/dotfiles
 ~/dotfiles/scripts/setup.sh
 ```
+
+## Screenshots
+![Browser](https://raw.githubusercontent.com/Souvlaki42/dotfiles/main/assets/screenshots/browser.png)
+![Terminal](https://raw.githubusercontent.com/Souvlaki42/dotfiles/main/assets/screenshots/terminal.png)
+![Files](https://raw.githubusercontent.com/Souvlaki42/dotfiles/main/assets/screenshots/files.png)
+![Desktop](https://raw.githubusercontent.com/Souvlaki42/dotfiles/main/assets/screenshots/desktop.png)

@@ -22,16 +22,16 @@ vim.keymap.set("v", "<A-j>", ":m '<-2<CR>gv=gv", { desc = "Move line up" })
 vim.keymap.set("v", "<A-k>", ":m '>+1<CR>gv=gv", { desc = "Move line down" })
 
 -- Yank/Copy into system clipboard
-vim.keymap.set("n", "<leader>y", '"*Y', { desc = "Yank line" })
-vim.keymap.set("v", "<leader>y", '"*y', { desc = "Yank motion" })
+vim.keymap.set("n", "<leader>y", '"+Y', { desc = "Yank line" })
+vim.keymap.set("v", "<leader>y", '"+y', { desc = "Yank motion" })
 
 -- Delete/Cut into system clipboard
-vim.keymap.set("n", "<leader>d", '"*D', { desc = "Delete line" })
-vim.keymap.set("v", "<leader>d", '"*d', { desc = "Delete motion" })
+vim.keymap.set("n", "<leader>d", '"+D', { desc = "Delete line" })
+vim.keymap.set("v", "<leader>d", '"+d', { desc = "Delete motion" })
 
 -- Paste from system clipboard
-vim.keymap.set("n", "<leader>p", '"*P', { desc = "Paste line" })
-vim.keymap.set("v", "<leader>p", '"*p', { desc = "Paste motion" })
+vim.keymap.set("n", "<leader>p", '"+P', { desc = "Paste line" })
+vim.keymap.set("v", "<leader>p", '"+p', { desc = "Paste motion" })
 
 -- Undo and redo
 vim.keymap.set("n", "u", ":undo<CR>", { desc = "Undo" })

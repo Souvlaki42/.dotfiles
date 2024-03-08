@@ -3,4 +3,5 @@ assets
 scripts
 .gitignore
 .stow-local-ignore
+.wallpaper.conf
 README.md

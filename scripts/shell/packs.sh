@@ -1,5 +1,7 @@
 #!/usr/bin/zsh
 
+source $HOME/.dotfiles.sh
+
 export PARU_HOME="$HOME/.local/share/paru"
 
 if [ ! -d "$PARU_HOME" ]; then

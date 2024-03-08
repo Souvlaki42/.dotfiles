@@ -14,8 +14,7 @@ function git_branch()
 # Environment variables
 export KITTY_ENABLE_WAYLAND=1
 export MOZ_ENABLE_WAYLAND=1
-export DOTFILES_DIR="$HOME/dotfiles"
-
+source $HOME/.dotfiles.sh
 precmd() { print -rP "%F{blue}%~%f$(git_branch)" }
 export PROMPT="%F{green}❯%f "
 

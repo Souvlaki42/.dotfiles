@@ -14,7 +14,6 @@ alias grep="grep --color=auto"
 # Apps
 alias vim="$EDITOR"
 alias neo="neofetch"
-alias mat="cmatrix"
 alias task="btop"
 alias speed="speedtest-cli"
 alias pn="pnpm"
