@@ -14,7 +14,9 @@ if [ -d "$WALLPAPERS_DIR" ]; then
     NEW_WALLPAPER=$(ls "$WALLPAPERS_DIR"/* | shuf -n 1)
   fi
 
-  echo -e "\$currentWallpaper = $NEW_WALLPAPER" > "$DOTFILES_DIR/.wallpaper.conf"
+  wal -i $NEW_WALLPAPER
+
+  $DOTFILES_DIR/scripts/hyprland-styles.sh
 
   hyprctl hyprpaper unload all
   hyprctl hyprpaper preload $NEW_WALLPAPER

@@ -9,6 +9,8 @@ vim.opt.shiftwidth = 2
 
 vim.opt.smartindent = true
 
+vim.opt.clipboard = "unnamedplus"
+
 vim.opt.wrap = true
 
 vim.opt.swapfile = false
@@ -18,8 +20,6 @@ vim.opt.undofile = true
 
 vim.opt.hlsearch = true
 vim.opt.incsearch = true
-
-vim.opt.termguicolors = true
 
 vim.opt.signcolumn = "yes"
 vim.opt.isfname:append("@-@")

@@ -7,7 +7,7 @@ My configuration repository for Arch Linux based installations.
 - [X] Make sure that copy images are stored in rofi clipboard manager.
 - [X] Add randomly generated hyprpaper wallpapers.
 - [X] Add screenshots to README.
-- [ ] Generate color palletes from wallpaper. (?)
+- [X] Generate color palletes from wallpaper. (?)
 
 ## Common Issue Fixes
 After setup.sh finishes, check .dotfiles.sh and .dotfiles.conf

@@ -20,6 +20,10 @@ export PROMPT="%F{green}❯%f "
 
 export EDITOR="nvim"
 
+# Persist pywal16
+(cat ~/.cache/wal/sequences &)
+source ~/.cache/wal/colors-tty.sh
+
 # Shell
 for file in $DOTFILES_DIR/scripts/shell/*; do
   if [[ -f "$file" ]]; then
