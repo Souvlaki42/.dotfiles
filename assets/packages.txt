@@ -37,6 +37,7 @@ libpulse
 libva-mesa-driver
 linux
 linux-firmware
+man-db
 nano
 neofetch
 neovim
@@ -66,9 +67,7 @@ slurp
 smartmontools
 speedtest-cli
 stow
-swayidle
 swayimg
-swaylock
 thunar
 tldr
 tmux
@@ -98,6 +97,8 @@ zram-generator
 zsh
 zsync
 bibata-cursor-theme-bin 2.0.6-1
+hypridle 0.1.1-1
+hyprlock 0.1.0-2
 hyprpicker 0.2.0-2
 pacseek-bin 1.8.2-1
 papirus-icon-theme-git 1:20240201.r16.g1e9edea071-1

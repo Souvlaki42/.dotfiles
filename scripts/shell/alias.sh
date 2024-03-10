@@ -17,8 +17,6 @@ alias neo="neofetch"
 alias task="btop"
 alias speed="speedtest-cli"
 alias pn="pnpm"
-alias pick="hyprpicker"
-alias tkill="tmux kill-server"
 
 # Git
 alias gcl="git clone"
