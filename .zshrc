@@ -15,14 +15,11 @@ function git_branch()
 export KITTY_ENABLE_WAYLAND=1
 export MOZ_ENABLE_WAYLAND=1
 source $HOME/.dotfiles.sh
+export EDITOR="nvim"
+export TERM="xterm-256color"
+
 precmd() { print -rP "%F{blue}%~%f$(git_branch)" }
 export PROMPT="%F{green}❯%f "
-
-export EDITOR="nvim"
-
-# Persist pywal16
-(cat ~/.cache/wal/sequences &)
-source ~/.cache/wal/colors-tty.sh
 
 # Shell
 for file in $DOTFILES_DIR/scripts/shell/*; do

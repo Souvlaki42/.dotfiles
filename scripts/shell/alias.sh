@@ -2,6 +2,7 @@
 
 # System
 alias shell="source ~/.zshrc"
+alias conf="$EDITOR $DOTFILES_DIR"
 alias cl="clear"
 
 # Listings
@@ -9,7 +10,10 @@ alias ls="exa"
 alias la="exa -a"
 alias ll="exa -alh"
 alias tree="exa --tree"
+
+# Findings
 alias grep="grep --color=auto"
+alias cat="bat"
 
 # Apps
 alias vim="$EDITOR"

@@ -1,6 +1,9 @@
+alacritty
 amd-ucode
 base
 base-devel
+bat
+binwalk
 bluez
 bluez-utils
 btop
@@ -8,7 +11,7 @@ cdrtools
 chromium
 cliphist
 cmake
-code
+dmidecode
 dolphin
 dunst
 efibootmgr
@@ -20,10 +23,12 @@ firefox
 fzf
 git
 github-cli
+gnu-netcat
 go
 grim
 grub
 gst-plugin-pipewire
+gvfs
 htop
 httpie
 hyprland
@@ -47,6 +52,7 @@ ntfs-3g
 nwg-look
 os-prober
 pavucontrol
+perl-image-exiftool
 pipewire
 pipewire-alsa
 pipewire-jack
@@ -98,7 +104,7 @@ zsh
 zsync
 bibata-cursor-theme-bin 2.0.6-1
 hypridle 0.1.1-1
-hyprlock 0.1.0-2
+hyprlock 0.2.0-1
 hyprpicker 0.2.0-2
 pacseek-bin 1.8.2-1
 papirus-icon-theme-git 1:20240201.r16.g1e9edea071-1
@@ -106,7 +112,9 @@ paru 2.0.1-1
 paru-debug 2.0.1-1
 pfetch 0.6.0-3
 python-pywalfox 2.7.4-1
+snapd 2.61.3-1
 spotify 1:1.2.31.1205-2
+visual-studio-code-bin 1.87.2-1
 waybar-updates 0.3.0-1
 webcord-bin 4.8.0-1
 wlogout 1.2.1-1

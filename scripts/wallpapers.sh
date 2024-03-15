@@ -18,7 +18,7 @@ if [ -d "$WALLPAPERS_DIR" ]; then
     NEW_WALLPAPER=$(ls "$WALLPAPERS_DIR"/* | shuf -n 1)
   fi
 
-  wal -i $NEW_WALLPAPER
+  wal -i $NEW_WALLPAPER -s -t
   echo "\$wallpaper = $wallpaper" >> "$output_file"
 
   hyprctl hyprpaper unload all
