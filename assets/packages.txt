@@ -104,19 +104,24 @@ zram-generator
 zsh
 zsync
 bibata-cursor-theme-bin 2.0.6-1
-docker-desktop 4.26.1-1
+binder_linux-dkms 6.8-1
+docker-desktop 4.28.0-139021
 hypridle 0.1.1-1
 hyprlock 0.2.0-1
 hyprpicker 0.2.0-2
-pacseek-bin 1.8.2-1
+libgbinder 1.1.38-1
+libglibutil 1.0.76-1
+pacseek-bin 1.8.2-2
 papirus-icon-theme-git 1:20240201.r17.g41dc55709c-1
 paru 2.0.3-1
 paru-debug 2.0.3-1
 pfetch 0.6.0-3
+python-gbinder 1.1.2-1
 python-pywalfox 2.7.4-1
 snapd 2.61.3-1
 spotify 1:1.2.31.1205-2
 visual-studio-code-bin 1.87.2-1
 waybar-updates 0.3.0-1
+waydroid 1.4.2-1
 webcord-bin 4.8.0-1
 wlogout 1.2.1-1
