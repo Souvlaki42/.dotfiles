@@ -14,15 +14,9 @@ fi
 function packages() {
   if [[ -v DOTFILES_DIR ]]; then
     { paru -Qqen; paru -Qm; } > "$DOTFILES_DIR/assets/packages.txt"
-    echo "Packages were synced successfully!"
   else
     echo "There is no package logs. Sorry!"
   fi
-}
-
-function updates() {
-  sudo paru -Syu
-  packages
 }
 
 function add() {
@@ -39,7 +33,7 @@ function add() {
         paru -Sy --needed "${aur_packages[@]}"
     fi
     if [ ${#official_packages[@]} -gt 0 ]; then
-        sudo paru -Sy --needed "${official_packages[@]}"
+        sudo pacman -Sy --needed "${official_packages[@]}"
     fi
     packages
 }

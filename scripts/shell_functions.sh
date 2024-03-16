@@ -9,16 +9,6 @@ function gs() # Git status or not a git repository.
   fi
 }
 
-function rmd() # Remove all directory's contents at once.
-{
-    local target="$1"
-
-    # If no argument is provided, use the current directory.
-    [ -z "$target" ] && target="."
-
-    rm -rf "$target"/{*,.[!.]*,..?*}
-}
-
 function havei() # Check if a package is installed in my system.
 {
   package=$1

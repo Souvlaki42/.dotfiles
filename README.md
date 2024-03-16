@@ -2,7 +2,7 @@
 My configuration repository for Arch Linux based installations.
 
 ## Todo
-- [ ] Make nvim setup better using kickstart nvim and automation. (LSP, comments, copy-paste, format)
+- [ ] Make waydroid work as expected.
 
 ## Common Issue Fixes
 After setup.sh finishes, check .dotfiles.sh and .dotfiles.conf
@@ -64,7 +64,7 @@ archinstall
 ```
 4. Configure the system to your liking.
 ```bash
-git clone https://github.com/Souvlaki42/dotfiles.git ~/dotfiles
+git clone https://github.com/Souvlaki42/dotfiles.git ~/dotfiles # Can be any other directory you like.
 ~/dotfiles/scripts/setup.sh
 ```
 

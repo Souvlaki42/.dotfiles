@@ -22,8 +22,8 @@ precmd() { print -rP "%F{blue}%~%f$(git_branch)" }
 export PROMPT="%F{green}❯%f "
 
 # Shell
-for file in $DOTFILES_DIR/scripts/shell/*; do
-  if [[ -f "$file" ]]; then
+for file in $DOTFILES_DIR/scripts/*; do
+  if [[ -f "$file" ]] && [[ "$file" =~ "shell_" ]]; then
     source "$file" || echo "Failed to source $file"
   fi
 done

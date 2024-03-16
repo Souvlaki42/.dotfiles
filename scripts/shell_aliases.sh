@@ -1,8 +1,6 @@
 #!/usr/bin/zsh
 
 # System
-alias shell="source ~/.zshrc"
-alias conf="$EDITOR $DOTFILES_DIR"
 alias cl="clear"
 
 # Listings
@@ -16,9 +14,8 @@ alias grep="grep --color=auto"
 alias cat="bat"
 
 # Apps
-alias vim="$EDITOR"
+alias vim="nvim"
 alias neo="neofetch"
-alias task="btop"
 alias speed="speedtest-cli"
 alias pn="pnpm"
 
