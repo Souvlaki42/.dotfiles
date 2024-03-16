@@ -2,7 +2,6 @@
 My configuration repository for Arch Linux based installations.
 
 ## Todo
-- [ ] Make TMUX backups plugin work.
 - [ ] Make nvim setup better using kickstart nvim and automation. (LSP, comments, copy-paste, format)
 
 ## Common Issue Fixes

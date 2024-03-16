@@ -12,6 +12,7 @@ chromium
 cliphist
 cmake
 dmidecode
+docker
 dolphin
 dunst
 efibootmgr
@@ -103,13 +104,14 @@ zram-generator
 zsh
 zsync
 bibata-cursor-theme-bin 2.0.6-1
+docker-desktop 4.26.1-1
 hypridle 0.1.1-1
 hyprlock 0.2.0-1
 hyprpicker 0.2.0-2
 pacseek-bin 1.8.2-1
-papirus-icon-theme-git 1:20240201.r16.g1e9edea071-1
-paru 2.0.1-1
-paru-debug 2.0.1-1
+papirus-icon-theme-git 1:20240201.r17.g41dc55709c-1
+paru 2.0.3-1
+paru-debug 2.0.3-1
 pfetch 0.6.0-3
 python-pywalfox 2.7.4-1
 snapd 2.61.3-1
