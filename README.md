@@ -2,7 +2,7 @@
 My configuration repository for Arch Linux based installations.
 
 ## Todo
-- [ ] Make waydroid work as expected.
+Nothing there anymore...
 
 ## Common Issue Fixes
 After setup.sh finishes, check .dotfiles.sh and .dotfiles.conf
