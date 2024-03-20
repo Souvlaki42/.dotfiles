@@ -4,6 +4,7 @@ base
 base-devel
 bat
 binwalk
+blueman
 bluez
 bluez-utils
 btop
@@ -24,6 +25,8 @@ firefox
 fzf
 git
 github-cli
+gnome-shell-extension-appindicator
+gnome-terminal
 gnu-netcat
 go
 grim
@@ -32,7 +35,9 @@ gst-plugin-pipewire
 gvfs
 htop
 httpie
+hypridle
 hyprland
+hyprlock
 hyprpaper
 imagemagick
 iwd
@@ -44,6 +49,7 @@ libva-mesa-driver
 linux
 linux-firmware
 man-db
+mkcert
 nano
 neofetch
 neovim
@@ -105,9 +111,8 @@ zsh
 zsync
 bibata-cursor-theme-bin 2.0.6-1
 binder_linux-dkms 6.8-1
+bluez-tools-extra 5.72-2
 docker-desktop 4.28.0-139021
-hypridle 0.1.1-1
-hyprlock 0.2.0-1
 hyprpicker 0.2.0-2
 pacseek-bin 1.8.2-2
 papirus-icon-theme-git 1:20240201.r17.g41dc55709c-1
