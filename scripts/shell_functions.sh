@@ -37,7 +37,6 @@ function f() # Fuzzy find directories.
       return 0
     else
       cd "$selected"
-      $EDITOR .
     fi
 }
 
