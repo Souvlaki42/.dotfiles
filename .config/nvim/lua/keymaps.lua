@@ -18,10 +18,10 @@ map("n", "<leader>sp", '<cmd>lua require("spectre").open_file_search({select_wor
 map("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true, desc = "Make script executable" })
 
 -- Move line(s) up and down
-map("n", "<A-j>", ":m .-2<CR>==", { desc = "Move line up" })
-map("n", "<A-k>", ":m .+1<CR>==", { desc = "Move line down" })
-map("v", "<A-j>", ":m '<-2<CR>gv=gv", { desc = "Move line up" })
-map("v", "<A-k>", ":m '>+1<CR>gv=gv", { desc = "Move line down" })
+map("n", "<A-k>", ":m .-2<CR>==", { desc = "Move line up" })
+map("n", "<A-j>", ":m .+1<CR>==", { desc = "Move line down" })
+map("v", "<A-k>", ":m '<-2<CR>gv=gv", { desc = "Move line up" })
+map("v", "<A-j>", ":m '>+1<CR>gv=gv", { desc = "Move line down" })
 
 -- Yank/Copy into system clipboard
 map("n", "<leader>y", '"+Y', { desc = "Yank line" })

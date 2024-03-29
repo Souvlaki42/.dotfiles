@@ -2,14 +2,13 @@ return {
 	{ "rust-lang/rust.vim" },
 	{ "christoomey/vim-tmux-navigator" },
 	{ "nvim-pack/nvim-spectre" },
-  { "mg979/vim-visual-multi" },
 	{
 		"pmizio/typescript-tools.nvim",
 		dependencies = { "nvim-lua/plenary.nvim", "neovim/nvim-lspconfig" },
 	},
 	{
 		"kylechui/nvim-surround",
-		version = "*", -- Use for stability; omit to use `main` branch for the latest features
+		version = "*",
 		event = "VeryLazy",
 	},
 	{
@@ -30,5 +29,12 @@ return {
 			require("trouble").setup({ use_diagnostic_signs = true })
 			vim.keymap.set("n", "<leader>tb", ":TroubleToggle<CR>")
 		end,
+	},
+	{
+		"numToStr/Comment.nvim",
+		opts = {
+			-- add any options here
+		},
+		lazy = false,
 	},
 }

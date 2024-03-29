@@ -2,8 +2,6 @@
 My configuration repository for Arch Linux based installations.
 
 ## Todo
-- [ ] Fix tmux
-- [ ] New nvim
 - [ ] Replace spotify
 - [ ] Update wallpapers
 
