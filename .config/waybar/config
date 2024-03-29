@@ -1,0 +1,84 @@
+{
+    "layer": "top",
+    "height": 30,
+    "spacing": 5,
+    // Choose the order of the modules
+    "modules-left": [
+        "custom/apps",
+        "hyprland/workspaces",
+        "tray"
+    ],
+    "modules-center": [
+        "hyprland/window"
+    ],
+    "modules-right": [
+        "custom/updates",
+        "bluetooth",
+        "hyprland/language",
+        "pulseaudio",
+        "network",
+				"clock",
+        "custom/power"
+		],
+		"hyprland/window": {
+			"separate-outputs": true
+		},
+    "hyprland/workspaces": {
+        "disable-scroll": true,
+        "all-outputs": true,
+        "on-click": "activate"
+    },
+    "tray": {
+        "spacing": 10
+    },
+		"custom/updates": {
+      "format": "{icon}{}",
+      "return-type": "json",
+      "format-icons": {
+        "pending-updates": " ",
+        "updated": "",
+      },
+      "exec-if": "which waybar-updates",
+      "exec": "waybar-updates",  
+			"on-click": "kitty -e 'paru'; pkill -SIGRTMIN+8 waybar",
+			"signal": 8
+		},
+  "bluetooth": {
+    "format": " {status}",
+    "format-disabled": "",
+    "format-off": "",
+    "on-click": "blueman-manager",
+  },
+  "hyprland/language": {
+    "format": "{long}",
+  },
+  "clock": {
+        "timezone": "Europe/Athens", 
+        "tooltip-format": "{:%A, %B %d, %Y}",
+        "format": "{:%a, %d %b, %I:%M %p}",
+  },
+   "network": {
+        "format-wifi": "󰤨",
+        "format-disconnected": "󰤭",
+				"tooltip-format": "Connected to {essid}"
+    },
+    "pulseaudio": {
+        "format": "{icon}",
+        "format-muted": "󰖁",
+				"format-icons": {
+					"default": ["", "", "󰕾"]
+				},
+				"tooltip-format": "{volume}% volume",
+        "on-click": "pavucontrol",
+		},
+    "custom/power": {
+        "format": "󰐥",
+        "on-click": "wlogout"
+    },
+    "custom/apps": {
+      "format": "Apps",
+      "on-click": "rofi -show drun"
+    }
+}
+
+// vim: ft=jsonc

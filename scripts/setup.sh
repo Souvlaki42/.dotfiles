@@ -42,9 +42,6 @@ sudo grub-mkconfig -o /boot/grub/grub.cfg
 # Create all user directories
 xdg-user-dirs-update
 
-# Installs pywal16 with pipx
-pipx install pywal16
-
 # Syncronize system clock
 timedatectl set-ntp true
 timedatectl set-local-rtc 1 --adjust-system-clock

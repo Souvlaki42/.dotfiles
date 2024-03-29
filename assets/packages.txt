@@ -40,6 +40,7 @@ hyprland
 hyprlock
 hyprpaper
 imagemagick
+imv
 iwd
 jose
 jq
@@ -52,6 +53,7 @@ linux
 linux-firmware
 man-db
 mkcert
+mpv
 nano
 neofetch
 neovim
@@ -73,6 +75,7 @@ qt5-graphicaleffects
 qt5-quickcontrols2
 qt5-wayland
 qt6-wayland
+qt6ct
 ripgrep
 rofi
 rofi-calc
@@ -115,12 +118,13 @@ zsync
 bibata-cursor-theme-bin 2.0.6-1
 binder_linux-dkms 6.8-1
 bluez-tools-extra 5.72-2
+cava 0.10.1-1
 docker-desktop 4.28.0-139021
 google-chrome 123.0.6312.86-1
 hyprpicker 0.2.0-2
 lib32-libstdc++5 3.3.6-8
 pacseek-bin 1.8.2-2
-papirus-icon-theme-git 1:20240201.r17.g41dc55709c-1
+papirus-icon-theme-git 1:20240201.r21.gdf803da7f0-1
 paru 2.0.3-1
 paru-debug 2.0.3-1
 pfetch 0.6.0-3

@@ -9,6 +9,10 @@ alias la="exa -a"
 alias ll="exa -alh"
 alias tree="exa --tree"
 
+# Mkdir
+alias md="mkdir"
+alias cw="cliphist wipe"
+
 # Findings
 alias grep="grep --color=auto"
 alias cat="bat"

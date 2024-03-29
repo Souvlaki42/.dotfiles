@@ -16,7 +16,6 @@ export KITTY_ENABLE_WAYLAND=1
 export MOZ_ENABLE_WAYLAND=1
 source $HOME/.dotfiles.sh
 export EDITOR="nvim"
-export TERM="xterm-256color"
 
 precmd() { print -rP "%F{blue}%~%f$(git_branch)" }
 export PROMPT="%F{green}❯%f "
@@ -53,8 +52,8 @@ export PATH="$BUN_INSTALL/bin:$PATH"
 [ -s "/home/souvlaki42/.bun/_bun" ] && source "/home/souvlaki42/.bun/_bun"
 
 # Compinit
-autoload -Uz compinit
-compinit
+autoload -Uz promptinit
+promptinit
 
 # Zoxide
 eval "$(zoxide init --cmd cd zsh)"

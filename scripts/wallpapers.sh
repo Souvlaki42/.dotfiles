@@ -1,9 +1,4 @@
 #/usr/bin/zsh
-
-colors_file="$HOME/.cache/wal/colors.sh"
-output_file="$HOME/.cache/wal/colors-hyprland.conf"
-
-source "$colors_file"
 source ~/.dotfiles.sh
 
 WALLPAPERS_DIR="$DOTFILES_DIR/assets/wallpapers"
@@ -18,7 +13,6 @@ if [ -d "$WALLPAPERS_DIR" ]; then
     NEW_WALLPAPER=$(ls "$WALLPAPERS_DIR"/* | shuf -n 1)
   fi
 
-  wal -i $NEW_WALLPAPER -s -t
   echo "\$wallpaper = $wallpaper" >> "$output_file"
 
   hyprctl hyprpaper unload all
