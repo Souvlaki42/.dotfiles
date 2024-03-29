@@ -2,7 +2,10 @@
 My configuration repository for Arch Linux based installations.
 
 ## Todo
-Nothing there anymore...
+- [ ] Fix tmux
+- [ ] New nvim
+- [ ] Replace spotify
+- [ ] Update wallpapers
 
 ## Common Issue Fixes
 After setup.sh finishes, check .dotfiles.sh and .dotfiles.conf
