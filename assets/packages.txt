@@ -1,4 +1,3 @@
-alacritty
 amd-ucode
 base
 base-devel
@@ -8,12 +7,10 @@ blueman
 bluez
 bluez-utils
 btop
-cdrtools
 cliphist
 cmake
 dmidecode
 docker
-dolphin
 dunst
 efibootmgr
 elixir
@@ -25,7 +22,6 @@ fzf
 git
 github-cli
 gnome-shell-extension-appindicator
-gnome-terminal
 gnu-netcat
 go
 grim
@@ -59,6 +55,7 @@ neofetch
 neovim
 network-manager-applet
 networkmanager
+noto-fonts-emoji
 ntfs-3g
 nwg-look
 os-prober
@@ -81,6 +78,7 @@ rofi
 rofi-calc
 rofi-emoji
 sddm
+silicon
 slurp
 smartmontools
 speedtest-cli
@@ -118,6 +116,7 @@ zsync
 bibata-cursor-theme-bin 2.0.6-1
 binder_linux-dkms 6.8-1
 bluez-tools-extra 5.72-2
+catppuccin-gtk-theme-mocha 0.7.1-1
 cava 0.10.1-1
 docker-desktop 4.28.0-139021
 google-chrome 123.0.6312.86-1
@@ -128,7 +127,6 @@ papirus-icon-theme-git 1:20240201.r21.gdf803da7f0-1
 paru 2.0.3-1
 paru-debug 2.0.3-1
 pfetch 0.6.0-3
-python-pywalfox 2.7.4-1
 snapd 2.61.3-1
 spotify 1:1.2.31.1205-2
 visual-studio-code-bin 1.87.2-1
