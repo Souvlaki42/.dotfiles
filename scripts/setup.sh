@@ -9,6 +9,8 @@ DOTFILES_DIR="$(cd "$(dirname "$0")" && cd .. && pwd)"
 # Write the dotfiles directory somewhere
 echo -e "#!/usr/bin/zsh\n\nexport DOTFILES_DIR=\"$DOTFILES_DIR\"" > "$HOME/.dotfiles.sh"
 echo -e "\$dotfilesDir = $DOTFILES_DIR" > "$HOME/.dotfiles.conf"
+jq --arg new_value "$DOTFILES_DIR/scripts/wifi.sh" '.network.on-click = $new_value' "$DOTFILES_DIR/.config/waybar/config" > temp.json && mv temp.json "$DOTFILES_DIR/.config/waybar/config"
+
 
 # Go to dotfiles
 cd "$DOTFILES_DIR"

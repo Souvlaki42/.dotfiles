@@ -26,6 +26,7 @@ alias pn="pnpm"
 # Git
 alias gcl="git clone"
 alias gpl="git pull"
+alias grv="git remote -v"
 alias ga="git add -A"
 alias gc="git commit -m"
 alias gp="git push"

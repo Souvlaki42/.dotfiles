@@ -50,17 +50,18 @@
     "on-click": "blueman-manager",
   },
   "hyprland/language": {
-    "format": "{long}",
+    "format": "{short}",
   },
   "clock": {
         "timezone": "Europe/Athens", 
-        "tooltip-format": "{:%A, %B %d, %Y}",
         "format": "{:%a, %d %b, %I:%M %p}",
+        "tooltip": false
   },
    "network": {
         "format-wifi": "󰤨",
         "format-disconnected": "󰤭",
-				"tooltip-format": "Connected to {essid}"
+				"tooltip-format": "Connected to {essid}",
+        "on-click": "notify-send '{DOTFILES_DIR}'"
     },
     "pulseaudio": {
         "format": "{icon}",
@@ -73,10 +74,12 @@
 		},
     "custom/power": {
         "format": "󰐥",
-        "on-click": "wlogout"
+        "on-click": "wlogout",
+        "tooltip": false
     },
     "custom/apps": {
-      "format": "Apps",
+      "format": "",
+      "tooltip": false,
       "on-click": "rofi -show drun"
     }
 }

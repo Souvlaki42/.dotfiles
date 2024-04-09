@@ -27,6 +27,16 @@ if [ ! -d "$BUN_INSTALL" ]; then
     curl -fsSL https://bun.sh/install | bash
 fi
 
+# Set DENO_INSTALL and PATH environment variables
+export DENO_INSTALL="/home/souvlaki42/.deno"
+export PATH="$DENO_INSTALL/bin:$PATH"
+
+if [ ! -d "$DENO_INSTALL" ]; then
+  # Download and install Deno
+  echo "Installing Deno..."
+  curl -fsSL https://deno.land/install.sh | sh
+fi
+
 # Set NVM_DIR environment variable
 export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
 
