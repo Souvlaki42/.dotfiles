@@ -13,14 +13,20 @@ function git_branch()
 
 # Environment variables
 export KITTY_ENABLE_WAYLAND=1
-export MOZ_ENABLE_WAYLAND=1
-source $HOME/.dotfiles.sh
 export EDITOR="nvim"
 
+# Zsh prompt
 precmd() { print -rP "%F{blue}%~%f$(git_branch)" }
 export PROMPT="%F{green}❯%f "
 
+# fzf catppuccin mocha
+export FZF_DEFAULT_OPTS=" \
+--color=bg+:#313244,bg:#1e1e2e,spinner:#f5e0dc,hl:#f38ba8 \
+--color=fg:#cdd6f4,header:#f38ba8,info:#cba6f7,pointer:#f5e0dc \
+--color=marker:#f5e0dc,fg+:#cdd6f4,prompt:#cba6f7,hl+:#f38ba8"
+
 # Shell
+source $HOME/.dotfiles.sh
 for file in $DOTFILES_DIR/scripts/*; do
   if [[ -f "$file" ]] && [[ "$file" =~ "shell_" ]]; then
     source "$file" || echo "Failed to source $file"

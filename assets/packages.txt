@@ -79,6 +79,7 @@ ripgrep
 rofi
 rofi-calc
 rofi-emoji
+rustup
 sddm
 silicon
 slurp
@@ -119,7 +120,7 @@ amberol 0.10.3-1
 bibata-cursor-theme-bin 2.0.6-1
 binder_linux-dkms 6.8-1
 bluez-tools-extra 5.72-2
-catppuccin-gtk-theme-mocha 0.7.1-1
+catppuccin-gtk-theme-mocha 0.7.3-1
 cava 0.10.1-1
 docker-desktop 4.28.0-139021
 google-chrome 123.0.6312.105-1
@@ -130,9 +131,10 @@ papirus-icon-theme-git 1:20240201.r21.gdf803da7f0-1
 paru 2.0.3-1
 paru-debug 2.0.3-1
 pfetch 0.6.0-3
-snapd 2.61.3-1
+pyprland 2.2.3-1
+snapd 2.62-1
 spotify 1:1.2.31.1205-2
-visual-studio-code-bin 1.87.2-1
+visual-studio-code-bin 1.88.0-1
 waybar-updates 0.3.0-1
 webcord-bin 4.8.0-1
 wlogout 1.2.1-1

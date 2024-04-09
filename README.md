@@ -2,7 +2,6 @@
 My configuration repository for Arch Linux based installations.
 
 ## Todo
-- [ ] Replace spotify
 - [ ] Update wallpapers
 
 ## Common Issue Fixes
