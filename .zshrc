@@ -1,52 +1,82 @@
-# This is the start of my ~/.zshrc configuration file in Arch Linux
+# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+# Initialization code that may require console input (password prompts, [y/n]
+# confirmations, etc.) must go above this block; everything else may go below.
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
 
-# Compinit
-autoload -U compinit 
-compinit
-
-function git_branch()
-{
-  branch=$(git symbolic-ref HEAD 2> /dev/null | awk 'BEGIN{FS="/"} {print $NF}')
-  if [[ $branch == "" ]];
-  then
-    :
-  else
-    echo " %F{red}("$branch")%f"
-  fi
-}
-
-# ENV
-export PATH="$PATH:$HOME/go/bin:$HOME/.local/bin"
-precmd() { print -rP "%F{blue}%~%f$(git_branch)" }
-export PROMPT="%F{green}❯%f "
+export GOPATH=$HOME/go
+export PATH=$GOPATH/bin:$PATH
 export KITTY_ENABLE_WAYLAND=1
 export EDITOR="nvim"
 
-# Zoxide
-eval "$(zoxide init --cmd cd zsh)"
+# Set the directory we want to store zinit and plugins
+ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
 
-# NVM
-source /usr/share/nvm/init-nvm.sh
+# Download Zinit, if it's not there yet
+if [ ! -d "$ZINIT_HOME" ]; then
+  mkdir -p "$(dirname $ZINIT_HOME)"
+  git clone https://github.com/zdharma-continum/zinit.git "$ZINIT_HOME"
+fi
 
-# Zsh plugins
-source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.plugin.zsh
-source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.plugin.zsh
-source /usr/share/zsh/plugins/zsh-history-substring-search/zsh-history-substring-search.zsh
-source /usr/share/zsh/plugins/zsh-you-should-use/you-should-use.plugin.zsh
+# Source/Load zinit
+source "${ZINIT_HOME}/zinit.zsh"
+
+# Add in Powerlevel10k
+zinit ice depth=1; zinit light romkatv/powerlevel10k
+
+# Add in zsh plugins
+zinit light zsh-users/zsh-syntax-highlighting
+zinit light zsh-users/zsh-completions
+zinit light zsh-users/zsh-autosuggestions
+zinit light MichaelAquilina/zsh-you-should-use
+zinit light Aloxaf/fzf-tab
+
+# Add in snippets
+zinit snippet OMZP::git
+zinit snippet OMZP::sudo
+zinit snippet OMZP::archlinux
+zinit snippet OMZP::aws
+zinit snippet OMZP::kubectl
+zinit snippet OMZP::kubectx
+zinit snippet OMZP::command-not-found
+
+# Load completions
+autoload -U compinit && compinit
+
+zinit cdreplay -q
+
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 # Keybindings
-bindkey "^[[A" history-substring-search-up
-bindkey "^[[B" history-substring-search-down
+bindkey -e
+bindkey "^p" history-search-backward
+bindkey "^n" history-search-forward
 bindkey "^[[H" beginning-of-line
 bindkey "^[[F" end-of-line
 
-# Persistant History
+# History
+HISTSIZE=100000
 HISTFILE=~/.zsh_history
-HISTSIZE=1000000000000
-SAVEHIST=1000000000000
+SAVE_HIST=$HISTSIZE
+HISTDUP=erase
 setopt appendhistory
+setopt sharehistory
+setopt hist_ignore_space
+setopt hist_ignore_all_dups
+setopt hist_save_no_dups
+setopt hist_ignore_dups
+setopt hist_find_no_dups
 
-# Alias
+# Completion styling
+zstyle ":completion:*" matcher-list "m:{a-z}={A-Za-z}"
+zstyle ":completion:*" list-colors "${(s.:.)LS_COLORS}"
+zstyle ":completion:*" menu no
+zstyle ":fzf-tab:complete:cd:*" fzf-preview "ls --color $realpath"
+zstyle ":fzf-tab:complete:__zoxide_z:*" fzf-preview "ls --color $realpath"
+
+# Aliases
 alias dot="/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME"
 alias cl="clear"
 alias ls="eza"
@@ -60,11 +90,10 @@ alias vim="nvim"
 alias picker="hyprpicker"
 alias nip="catnip"
 alias top="htop"
-alias gcl="git clone"
-alias gpl="git pull"
-alias grv="git remote -v"
-alias ga="git add -A"
-alias gu="git add -u"
-alias gc="git commit -m"
-alias gp="git push"
-alias gs="git status"
+
+# Shell integrations
+eval "$(fzf --zsh)"
+eval "$(zoxide init --cmd cd zsh)"
+
+# Node Version Manager
+source /usr/share/nvm/init-nvm.sh
