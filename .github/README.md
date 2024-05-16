@@ -1,6 +1,29 @@
 # Dotfiles
 My configuration repository for Arch Linux based installations.
 
+![I use Arch BTW](https://raw.githubusercontent.com/Souvlaki42/dotfiles/main/.local/assets/arch.jpg)
+
+## Uses
+OS -> Arch Linux
+Window Manager -> Hyprland
+Display Manager -> SDDM (Theme: Chili)
+Theme -> Catppuccin Mocha
+Fetch -> Catnip
+Cursor -> Bibata Modern Ice
+Font -> JetBrains Mono Nerd Font
+Terminal -> Kitty
+Filemanager -> Thunar
+Browser -> Firefox
+Menu -> Wofi
+Bar -> Waybar
+Logout -> Wlogout
+Chat -> WebCord
+Music -> Spotify
+Editor -> VS Code
+Notes -> Dynalist
+Game Engine -> Godot
+Screenshot Engine -> Grim
+
 ## How to use
 1. Connect to internet.
 Ethernet should work automatically.
@@ -48,7 +71,7 @@ mount /dev/<windows_partition> /mnt/windows # Mount windows_partition to /mnt/wi
 3. Run the archinstall script:
 ```bash
 # Using my pre-defined configuration file
-archinstall --config https://raw.githubusercontent.com/Souvlaki42/dotfiles/main/.local/user_configuration.json
+archinstall --config https://raw.githubusercontent.com/Souvlaki42/dotfiles/main/.local/assets/user_configuration.json
 # Manual configuration
 archinstall
 # DON'T FORGET, to set up a user account.
@@ -56,14 +79,14 @@ archinstall
 # OPTIONALY, you can make any other changes you want. (If you change anything else, please save new user configuration to /mnt/root or somewhere else)
 # When you are done configuring, press install, wait to be done, say no to chroot, reboot and move to the next and final step.
 ```
-4. Configure the system to your liking.
+4. Configure and customize the system to your liking.
 ```bash
-git clone https://github.com/Souvlaki42/dotfiles.git ~/dotfiles # Can be any other directory you like.
-~/dotfiles/scripts/setup.sh
+git clone --bare https://github.com/Souvlaki42/dotfiles.git $HOME/dotfiles # Can be any other directory you like.
+git --git-dir=$HOME/dotfiles --work-tree=$HOME checkout
 ```
 
 ## Screenshots
-![Browser](https://raw.githubusercontent.com/Souvlaki42/dotfiles/main/assets/screenshots/browser.png)
-![Terminal](https://raw.githubusercontent.com/Souvlaki42/dotfiles/main/assets/screenshots/terminal.png)
-![Files](https://raw.githubusercontent.com/Souvlaki42/dotfiles/main/assets/screenshots/files.png)
-![Desktop](https://raw.githubusercontent.com/Souvlaki42/dotfiles/main/assets/screenshots/desktop.png)
+![Browser](https://raw.githubusercontent.com/Souvlaki42/dotfiles/main/.local/assets/browser.png)
+![Terminal](https://raw.githubusercontent.com/Souvlaki42/dotfiles/main/.local/assets/terminal.png)
+![Files](https://raw.githubusercontent.com/Souvlaki42/dotfiles/main/.local/assets/files.png)
+![Desktop](https://raw.githubusercontent.com/Souvlaki42/dotfiles/main/.local/assets/desktop.png)
