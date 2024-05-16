@@ -37,6 +37,3 @@ map("n", "r", ":redo<CR>", { desc = "Redo" })
 
 -- Select all
 map("n", "<C-a>", "ggVG", { noremap = true })
-
--- Write & quit
-map("n", "q", ":wqa<CR>", { desc = "Write & quit" })

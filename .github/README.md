@@ -4,25 +4,25 @@ My configuration repository for Arch Linux based installations.
 ![I use Arch BTW](https://raw.githubusercontent.com/Souvlaki42/dotfiles/main/.local/assets/arch.jpg)
 
 ## Uses
-OS -> Arch Linux
-Window Manager -> Hyprland
-Display Manager -> SDDM (Theme: Chili)
-Theme -> Catppuccin Mocha
-Fetch -> Catnip
-Cursor -> Bibata Modern Ice
-Font -> JetBrains Mono Nerd Font
-Terminal -> Kitty
-Filemanager -> Thunar
-Browser -> Firefox
-Menu -> Wofi
-Bar -> Waybar
-Logout -> Wlogout
-Chat -> WebCord
-Music -> Spotify
-Editor -> VS Code
-Notes -> Dynalist
-Game Engine -> Godot
-Screenshot Engine -> Grim
+OS -> Arch Linux \
+Window Manager -> Hyprland \
+Display Manager -> SDDM (Theme: Chili) \
+Theme -> Catppuccin Mocha \
+Fetch -> Catnip \
+Cursor -> Bibata Modern Ice \
+Font -> JetBrains Mono Nerd Font \
+Terminal -> Kitty \
+Filemanager -> Thunar \
+Browser -> Firefox \
+Menu -> Wofi \
+Bar -> Waybar \
+Logout -> Wlogout \
+Chat -> WebCord \
+Music -> Spotify \
+Editor -> VS Code \
+Notes -> Dynalist \
+Game Engine -> Godot \
+Screenshot Engine -> Grim \
 
 ## How to use
 1. Connect to internet.
