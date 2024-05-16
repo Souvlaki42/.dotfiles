@@ -48,7 +48,7 @@ mount /dev/<windows_partition> /mnt/windows # Mount windows_partition to /mnt/wi
 3. Run the archinstall script:
 ```bash
 # Using my pre-defined configuration file
-archinstall --config https://raw.githubusercontent.com/Souvlaki42/dotfiles/main/user_configuration.json
+archinstall --config https://raw.githubusercontent.com/Souvlaki42/dotfiles/main/.local/user_configuration.json
 # Manual configuration
 archinstall
 # DON'T FORGET, to set up a user account.
