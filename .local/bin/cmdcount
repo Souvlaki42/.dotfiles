@@ -1,0 +1,17 @@
+#!/usr/bin/zsh
+
+# Create an associative array to store command counts
+typeset -A command_counts
+
+# Read .zsh_history and count occurrences of each command
+while read -r line; do
+    command=${line#*:}
+    (( command_counts[$command]++ ))
+done < $HOME/.zsh_history
+
+# Output commands with counts
+for cmd in ${(k)command_counts}; do
+    count=${command_counts[$cmd]}
+    echo "$count x $cmd"
+done
+
