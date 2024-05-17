@@ -1,8 +1,10 @@
+@import "colors.css";
+
 * {
   font-family: "hack nerd font";
   font-weight: 900;
   font-size: 14px;
-  /* color: #ci0caf5; */
+  color: @text;
 }
 
 /* Set background color of main waybar window */
@@ -12,7 +14,7 @@ window#waybar {
 
 /* Set background color of tooltips */
 tooltip {
-  background: #1e1e2e;
+  background: @surface0;
 }
 
 #workspaces,
@@ -33,7 +35,7 @@ tooltip {
 
 /* Sets active workspace to have a solid line on the bottom */
 #workspaces button.active {
-  border-bottom: 2px solid #7aa2f7;
+  border-bottom: 2px solid @blue;
   border-radius: 0;
   margin-bottom: 2px;
 }
@@ -71,30 +73,30 @@ tooltip {
 
 /* Rounding only on right of module(s) */
 #battery { 
-  color: #C2D5A8;
+  color: @green;
   border-radius: 0 12px 12px 0;
 }
 
 #cpu,
 #memory {
-  color: #E3A7C0;
+  color: @maroon;
 }
 
 #backlight {
-  color: #F8EFE6;
+  color: @subtext1;
 }
 
 #network {
-  color: #F0D5BA;
+  color: @yellow;
 }
 
 #pulseaudio {
-  color: #BAD5F0;
+  color: @lavender;
 }
 
 #battery.critical {
   color: white;
-  background: #f7768e;
+  background: @red;
 }
 
 #custom-power {
@@ -106,3 +108,4 @@ tooltip {
   border-radius: 12px;
   margin-right: 5px;
 }
+

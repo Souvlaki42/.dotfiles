@@ -1,6 +1,6 @@
 return {
 	{ "rust-lang/rust.vim" },
-	{ "christoomey/vim-tmux-navigator" },
+ --  { "christoomey/vim-tmux-navigator" },
 	{ "nvim-pack/nvim-spectre" },
 	{
 		"pmizio/typescript-tools.nvim",
@@ -8,9 +8,12 @@ return {
 	},
 	{
 		"numToStr/Comment.nvim",
-		opts = {
-			-- add any options here
-		},
 		lazy = false,
 	},
+  {
+    "norcalli/nvim-colorizer.lua",
+    config = function ()
+      require("colorizer").setup()
+    end
+  }
 }

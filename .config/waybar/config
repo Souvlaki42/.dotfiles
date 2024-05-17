@@ -54,11 +54,12 @@
     "cpu": {
         "format": " {usage}",
         "on-click": "kitty htop",
-        "min-length": 5,
         "interval": 5
     },
    "memory": {
-       "format": "{}% "
+       "format": "{percentage}% ",
+       "on-click": "kitty htop",
+       "interval": 5
    },
     "battery": {
         "states": {
@@ -112,8 +113,8 @@
             "default": ["", "", ""]
         },
         "on-click": "pavucontrol",
-        "on-scroll-up": "swayosd-client --output-volume +5",
-        "on-scroll-down": "swayosd-client --output-volume -5",
+        "on-scroll-up": "swayosd-client --output-volume +1",
+        "on-scroll-down": "swayosd-client --output-volume -1",
         "scroll-step": 5.0,
         "min-length": 7
     },
