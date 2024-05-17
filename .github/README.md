@@ -14,7 +14,7 @@ Font -> JetBrains Mono Nerd Font \
 Terminal -> Kitty \
 Filemanager -> Thunar \
 Browser -> Firefox \
-Menu -> Wofi \
+Launcher -> Wofi \
 Bar -> Waybar \
 Logout -> Wlogout \
 Chat -> WebCord \
@@ -22,7 +22,7 @@ Music -> Spotify \
 Editor -> VS Code \
 Notes -> Dynalist \
 Game Engine -> Godot \
-Screenshot Engine -> Grim \
+Screenshot Engine -> Grim
 
 ## How to use
 1. Connect to internet.
@@ -90,3 +90,4 @@ git --git-dir=$HOME/dotfiles --work-tree=$HOME checkout
 ![Terminal](https://raw.githubusercontent.com/Souvlaki42/dotfiles/main/.local/assets/terminal.png)
 ![Files](https://raw.githubusercontent.com/Souvlaki42/dotfiles/main/.local/assets/files.png)
 ![Desktop](https://raw.githubusercontent.com/Souvlaki42/dotfiles/main/.local/assets/desktop.png)
+![Launcher](https://raw.githubusercontent.com/Souvlaki42/dotfiles/main/.local/assets/launcher.png)
