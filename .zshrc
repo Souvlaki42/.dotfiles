@@ -6,9 +6,11 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
 fi
 
 export GOPATH=$HOME/go
-export PATH=$GOPATH/bin:$PATH
+export LOCAL=$HOME/.local
+export PATH=$GOPATH/bin:$LOCAL/bin:$PATH
 export KITTY_ENABLE_WAYLAND=1
 export EDITOR="nvim"
+export VISUAL="code"
 
 # Set the directory we want to store zinit and plugins
 ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
@@ -50,7 +52,7 @@ zinit cdreplay -q
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 # Keybindings
-bindkey -e
+bindkey -v
 bindkey "^p" history-search-backward
 bindkey "^n" history-search-forward
 bindkey "^[[H" beginning-of-line
@@ -78,6 +80,7 @@ zstyle ":fzf-tab:complete:__zoxide_z:*" fzf-preview "ls --color $realpath"
 
 # Aliases
 alias dot="/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME"
+alias preview="fzf --preview 'bat --color=always --style=numbers --line-range=:500 {}'"
 alias cl="clear"
 alias ls="eza"
 alias la="eza -a"
@@ -90,6 +93,7 @@ alias vim="nvim"
 alias picker="hyprpicker"
 alias nip="catnip"
 alias top="htop"
+alias packages="{ paru -Qqen; paru -Qm; } | fzf"
 
 # Shell integrations
 eval "$(fzf --zsh)"
