@@ -29,6 +29,7 @@ zinit ice depth=1; zinit light romkatv/powerlevel10k
 
 # Add in zsh plugins
 zinit light zsh-users/zsh-syntax-highlighting
+zinit light zsh-users/zsh-history-substring-search
 zinit light zsh-users/zsh-completions
 zinit light zsh-users/zsh-autosuggestions
 zinit light MichaelAquilina/zsh-you-should-use
@@ -53,8 +54,8 @@ zinit cdreplay -q
 
 # Keybindings
 bindkey -v
-bindkey "^p" history-search-backward
-bindkey "^n" history-search-forward
+bindkey "^[[A" history-substring-search-up
+bindkey "^[[B" history-substring-search-down
 bindkey "^[[H" beginning-of-line
 bindkey "^[[F" end-of-line
 
@@ -87,7 +88,6 @@ alias la="eza -a"
 alias ll="eza -alh"
 alias tree="eza --tree"
 alias md="mkdir"
-alias grep="grep --color auto"
 alias cat="bat"
 alias vim="nvim"
 alias picker="hyprpicker"
