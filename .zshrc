@@ -94,6 +94,7 @@ alias picker="hyprpicker"
 alias nip="catnip"
 alias top="htop"
 alias packages="{ paru -Qqen; paru -Qm; } | fzf"
+alias countdir="find . -mindepth 1 -maxdepth 1 -type d | wc -l"
 
 # Shell integrations
 eval "$(fzf --zsh)"
