@@ -8,6 +8,7 @@ OS -> Arch Linux \
 Window Manager -> Hyprland \
 Display Manager -> SDDM (Theme: Chili) \
 Theme -> Catppuccin Mocha \
+Dotfiles Manager -> GNU Stow \
 Fetch -> Catnip \
 Cursor -> Bibata Modern Ice \
 Font -> JetBrains Mono Nerd Font \
@@ -21,7 +22,7 @@ Chat -> WebCord \
 Music -> Spotify \
 Editor -> VS Code \
 Notes -> Dynalist \
-Game Engine -> Godot \
+Game Engine -> Godot/Mono \
 Screenshot Engine -> Grim
 
 ## How to use
@@ -81,8 +82,10 @@ archinstall
 ```
 4. Configure and customize the system to your liking.
 ```bash
-git clone --bare https://github.com/Souvlaki42/dotfiles.git $HOME/dotfiles # Can be any other directory you like.
-git --git-dir=$HOME/dotfiles --work-tree=$HOME checkout
+git clone https://github.com/Souvlaki42/dotfiles.git $HOME/dotfiles # Can be any other directory you like.
+cd $HOME/dotfiles # Or any other directory you chose to use.
+stow . # Create the required symlinks using GNU Stow so the system functions like you want to.
+reboot # (or sudo reboot) This is optional but recommended to make sure the changes are applied before using the system.
 ```
 
 ## Screenshots

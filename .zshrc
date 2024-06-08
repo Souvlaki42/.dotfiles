@@ -80,7 +80,6 @@ zstyle ":fzf-tab:complete:cd:*" fzf-preview "ls --color $realpath"
 zstyle ":fzf-tab:complete:__zoxide_z:*" fzf-preview "ls --color $realpath"
 
 # Aliases
-alias dot="/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME"
 alias preview="fzf --preview 'bat --color=always --style=numbers --line-range=:500 {}'"
 alias cl="clear"
 alias ls="eza"
@@ -94,7 +93,6 @@ alias picker="hyprpicker"
 alias nip="catnip"
 alias top="htop"
 alias packages="{ paru -Qqen; paru -Qm; } | fzf"
-alias countdir="find . -mindepth 1 -maxdepth 1 -type d | wc -l"
 
 # Shell integrations
 eval "$(fzf --zsh)"
