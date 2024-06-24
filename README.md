@@ -10,6 +10,7 @@ Display Manager -> SDDM (Theme: Chili) \
 Theme -> Catppuccin Mocha \
 Dotfiles Manager -> GNU Stow \
 Fetch -> Catnip \
+Prompt -> Oh My Posh (RIP p10k) \
 Cursor -> Bibata Modern Ice \
 Font -> JetBrains Mono Nerd Font \
 Terminal -> Kitty \
