@@ -2,6 +2,7 @@
 
 version = 2
 final_space = true
+auto_upgrade = true
 console_title_template = "{{ .Shell }} in {{ .Folder }}"
 
 [[blocks]]
@@ -22,7 +23,7 @@ console_title_template = "{{ .Shell }} in {{ .Folder }}"
   [[blocks.segments]]
     type = "git"
     style = "plain"
-    foreground = "#6c6c6c" # p:grey
+    foreground = "#6c6c6c"
     background = "transparent"
     template = " {{ .HEAD }}{{ if or (.Working.Changed) (.Staging.Changed) }}*{{ end }} <cyan>{{ if gt .Behind 0 }}⇣{{ end }}{{ if gt .Ahead 0 }}⇡{{ end }}</>"
  
@@ -72,6 +73,3 @@ console_title_template = "{{ .Shell }} in {{ .Folder }}"
   foreground = "magenta"
   background = "transparent"
   template = "❯❯ "
-
-# [pallete]
-# grey = "#6c6c6c"
