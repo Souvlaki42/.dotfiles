@@ -3,6 +3,10 @@ My configuration repository for Arch Linux based installations.
 
 ![I use Arch BTW](https://raw.githubusercontent.com/Souvlaki42/dotfiles/main/.local/assets/arch.jpg)
 
+This now includes a lot of stuff I don't use anymore, but I'm keeping it here for future reference.
+
+Also, it includes stuff for my WSL2 installations with WezTerm and Neovim.
+
 ## Uses
 OS -> Arch Linux \
 Window Manager -> Hyprland \
