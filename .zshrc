@@ -1,22 +1,28 @@
 # Add deno completions to search path
 if [[ ":$FPATH:" != *":/home/ilias/.zsh/completions:"* ]]; then export FPATH="/home/ilias/.zsh/completions:$FPATH"; fi
 
-# Export editors
-export EDITOR="nvim"
-export VISUAL="code"
+# Make sure WSL2 Ubuntu 24.04 LTS runs under Wayland
+ln -sf /mnt/wslg/runtime-dir/wayland-* $XDG_RUNTIME_DIR/
 
-# Nix
-export NIXPKGS_ALLOW_UNFREE=1
+# Configure expected locations
+export GOPATH="$HOME/go"
+export BUN_INSTALL="$HOME/.bun"
+export NVM_DIR="$HOME/.nvm"
+
+# Configure PATH
+export PATH="$HOME/.local/bin:$GOPATH/bin:$HOME/.cargo/bin:$BUN_INSTALL/bin:$PATH"
+
+# Load nvm and its completions
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# bun completions
+[ -s "/home/ilias/.bun/_bun" ] && source "/home/ilias/.bun/_bun"
 
 # Export browser in WSL2
 export BROWSER=wslview
 
-# Configure PATH
-export GOPATH=$HOME/go
-export PHP_INI_SCAN_DIR="/home/ilias/.config/herd-lite/bin:$PHP_INI_SCAN_DIR"
-export PATH=$HOME/.nix-profile/bin:$HOME/.local/bin:$GOPATH/bin:$HOME/.cargo/bin:$HOME/.npm-global:~/.config/herd-lite/bin:$PATH
-
-# True colors (16 million colors support)
+# Enable true color support (16M colors)
 export COLORTERM=truecolor
 
 # Set the directory we want to store zinit and plugins
@@ -49,23 +55,26 @@ zinit snippet OMZP::kubectx
 zinit snippet OMZP::command-not-found
 
 # Aliases
-alias cl="clear; tmux clear-history; clear"
+alias cl="tmux clear-history; clear"
 alias ls="eza"
 alias la="eza -a"
 alias ll="eza -alh"
 alias tree="eza --tree"
 alias md="mkdir"
-alias cat="bat"
 alias v="nvim"
-alias top="htop"
+alias top="glances"
 alias fetch="fastfetch"
+alias lg="lazygit"
 
-# Shell integration
+# Aliases for versioning
+alias python="python3"
+alias pip="pip3"
+alias gcc="gcc-14"
+alias g++="g++-14"
+
+# Shell integrations
 eval "$(fzf --zsh)"
 eval "$(zoxide init --cmd cd zsh)"
-eval "$(direnv hook zsh)"
-
-# Oh My Posh configuration
 eval "$(oh-my-posh init zsh --config $HOME/.config/ohmyposh/zen.toml)"
 
 # Automatically start or attach to a tmux session
@@ -92,6 +101,11 @@ setopt hist_ignore_all_dups
 setopt hist_save_no_dups
 setopt hist_ignore_dups
 setopt hist_find_no_dups
+setopt histignorealldups sharehistory
+
+# Set up the prompt
+autoload -Uz promptinit
+promptinit
 
 # Use emacs keybindings even if our EDITOR is set to vi
 bindkey -e
@@ -99,21 +113,15 @@ bindkey "^p" history-search-backward
 bindkey "^n" history-search-forward
 bindkey "^[w" kill-region
 
-# Setup home/end keys in zsh
-bindkey "^[[1~" beginning-of-line
-bindkey "^[[4~" end-of-line
-bindkey "^[[H" beginning-of-line
-bindkey "^[[F" end-of-line
-
 # Use modern completion system
 fpath+=~/.zfunc
 autoload -Uz compinit
 compinit
 
-# Zinit setup
+# Zinit setu
 zinit cdreplay -q
 
-# Zstyles
+# Set up the prompt and completions
 zstyle ':completion:*' auto-description 'specify: %d'
 zstyle ':completion:*' completer _expand _complete _correct _approximate
 zstyle ':completion:*' format 'Completing %d'
@@ -131,10 +139,3 @@ zstyle ':completion:*' verbose true
 zstyle ':completion:*:*:kill:*:processes' list-colors '=(#b) #([0-9]#)*=0=01;31'
 zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,%cpu,tty,cputime,cmd'
 
-# bun
-[ -s "/home/ilias/.bun/_bun" ] && source "/home/ilias/.bun/_bun"
-export BUN_INSTALL="$HOME/.bun"
-export PATH="$BUN_INSTALL/bin:$PATH"
-
-# deno
-. "/home/ilias/.deno/env"

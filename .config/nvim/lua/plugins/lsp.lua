@@ -13,7 +13,9 @@ return {
 				"tailwindcss",
 				"astro",
 				"emmet_language_server",
+				"clangd",
 			},
+      automatic_installation = true,
 		},
 	},
 	{
@@ -48,6 +50,15 @@ return {
 			})
 			lspconfig.gopls.setup({
 				capabilities = capabilities,
+				settings = {
+					gopls = {
+						completeUnimported = true,
+						usePlaceholders = true,
+						analyses = {
+							unusedparams = true,
+						},
+					},
+				},
 			})
 			lspconfig.rust_analyzer.setup({
 				capabilities = capabilities,
@@ -58,6 +69,10 @@ return {
 			lspconfig.html.setup({
 				capabilities = capabilities,
 			})
+			lspconfig.clangd.setup({
+				capabilities = capabilities,
+			})
+
 			lspconfig.emmet_language_server.setup({
 				capabilities = capabilities,
 				filetypes = {
@@ -99,7 +114,8 @@ return {
 			vim.keymap.set("n", "<leader>f", vim.lsp.buf.format)
 			vim.keymap.set("n", "K", vim.lsp.buf.hover)
 			vim.keymap.set("n", "gd", vim.lsp.buf.definition)
-			vim.keymap.set("n", "f2", vim.lsp.buf.rename)
+			vim.keymap.set("n", "rn", vim.lsp.buf.rename)
+			vim.keymap.set("n", "gr", vim.lsp.buf.references)
 			vim.keymap.set({ "n", "v" }, "<leader>ca", vim.lsp.buf.code_action)
 		end,
 	},

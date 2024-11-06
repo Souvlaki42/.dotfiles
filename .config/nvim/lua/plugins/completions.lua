@@ -15,10 +15,15 @@ return {
 			"hrsh7th/cmp-path",
 			"hrsh7th/cmp-buffer",
 			"hrsh7th/cmp-cmdline",
+      "tamago324/cmp-zsh"
 		},
 		config = function()
 			local cmp = require("cmp")
 			require("luasnip.loaders.from_vscode").lazy_load()
+
+      require("cmp_zsh").setup({
+        zshrc = true,
+      })
 
 			cmp.setup({
 				snippet = {
@@ -41,6 +46,7 @@ return {
 					{ name = "nvim_lsp" },
 					{ name = "luasnip" },
 					{ name = "path" },
+          { name = "zsh" },
 				}, {
 					{ name = "buffer" },
 				}),

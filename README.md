@@ -8,27 +8,27 @@ This now includes a lot of stuff I don't use anymore, but I'm keeping it here fo
 Also, it includes stuff for my WSL2 installations with WezTerm and Neovim.
 
 ## Uses
-OS -> Arch Linux \
+OS -> Arch Linux/WSL2 \
 Window Manager -> Hyprland \
 Display Manager -> SDDM (Theme: Chili) \
 Theme -> Catppuccin Mocha \
 Dotfiles Manager -> GNU Stow \
-Fetch -> Catnip \
+Fetch -> Fastfetch \
 Prompt -> Oh My Posh (RIP p10k) \
 Cursor -> Bibata Modern Ice \
-Font -> JetBrains Mono Nerd Font \
-Terminal -> Kitty \
+Font -> Hack Nerd Font \
+Terminal -> WezTerm \
 Filemanager -> Thunar \
-Browser -> Firefox \
+Browser -> Zen Browser \
 Launcher -> Wofi \
 Bar -> Waybar \
 Logout -> Wlogout \
 Chat -> WebCord \
 Music -> Spotify \
-Editor -> VS Code \
-Notes -> Dynalist \
+Editor -> VS Code/Neovim/Zed \
+Notes -> Obsidian \
 Game Engine -> Godot/Mono \
-Screenshot Engine -> Grim
+Screenshot Engine -> Hyprshot
 
 ## How to use
 1. Connect to internet.

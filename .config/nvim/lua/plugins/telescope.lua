@@ -12,6 +12,8 @@ return {
 			end, { desc = "Find Files" })
 			vim.keymap.set("n", "<leader>fg", builtin.live_grep, { desc = "Live grep" })
 			vim.keymap.set("n", "<leader>fk", builtin.keymaps, { desc = "Find Keymaps" })
+      vim.keymap.set("n", "<leader>fb", builtin.buffers, { desc = "Find Buffers" })
+      vim.keymap.set("n", "<leader><leader>", builtin.oldfiles, { desc = "Find Old Files" })
 		end,
 	},
 	{
