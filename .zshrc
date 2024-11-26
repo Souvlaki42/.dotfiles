@@ -10,7 +10,7 @@ export BUN_INSTALL="$HOME/.bun"
 export NVM_DIR="$HOME/.nvm"
 
 # Configure PATH
-export PATH="$HOME/.local/bin:$GOPATH/bin:$HOME/.cargo/bin:$BUN_INSTALL/bin:$PATH"
+export PATH="$HOME/.local/bin:$GOPATH/bin:$HOME/.cargo/bin:$BUN_INSTALL/bin:/var/bash.bs:$PATH"
 
 # Load nvm and its completions
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
@@ -21,6 +21,12 @@ export PATH="$HOME/.local/bin:$GOPATH/bin:$HOME/.cargo/bin:$BUN_INSTALL/bin:$PAT
 
 # Export browser in WSL2
 export BROWSER=wslview
+
+# Export editor in WSL2
+export EDITOR=nvim
+export VISUAL=nvim
+export GIT_EDITOR=nvim
+export MANPAGER=nvim
 
 # Enable true color support (16M colors)
 export COLORTERM=truecolor
@@ -55,7 +61,7 @@ zinit snippet OMZP::kubectx
 zinit snippet OMZP::command-not-found
 
 # Aliases
-alias cl="tmux clear-history; clear"
+alias cl="clear; tmux clear-history; clear"
 alias ls="eza"
 alias la="eza -a"
 alias ll="eza -alh"
@@ -65,6 +71,22 @@ alias v="nvim"
 alias top="glances"
 alias fetch="fastfetch"
 alias lg="lazygit"
+
+# Manage tmux sessions
+function ta() {
+  session_name="${1:-default}"
+  tmux new-session -A -s "$session_name"
+}
+function tk() {
+  if [ -z "$1" ]; then
+    tmux kill-session
+  else
+    tmux kill-session -t "$1"
+  fi
+}
+alias taa="tmux attach"
+alias tl="tmux list-sessions"
+alias td="tmux detach"
 
 # Aliases for versioning
 alias python="python3"
@@ -76,18 +98,6 @@ alias g++="g++-14"
 eval "$(fzf --zsh)"
 eval "$(zoxide init --cmd cd zsh)"
 eval "$(oh-my-posh init zsh --config $HOME/.config/ohmyposh/zen.toml)"
-
-# Automatically start or attach to a tmux session
-if command -v tmux > /dev/null && [ -z "$TMUX" ]; then
-  # Check if there's any existing session
-  if tmux ls &>/dev/null; then
-    # Attach to the last active session
-    tmux attach-session -t "$(tmux ls | grep -o '^[^:]*' | head -n 1)"
-  else
-    # Start a new session if no sessions exist
-    tmux new-session
-  fi
-fi
 
 # Keep 1000 lines of history within the shell and save it to ~/.zsh_history:
 HISTSIZE=1000

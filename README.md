@@ -21,7 +21,7 @@ Terminal -> WezTerm \
 Filemanager -> Thunar \
 Browser -> Zen Browser \
 Launcher -> Wofi \
-Bar -> Waybar \
+Bar -> HyprPanel \
 Logout -> Wlogout \
 Chat -> WebCord \
 Music -> Spotify \
