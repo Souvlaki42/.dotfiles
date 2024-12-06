@@ -2,6 +2,12 @@ return {
 	"folke/noice.nvim",
 	event = "VeryLazy",
 	opts = {
+		routes = {
+			{
+				view = "notify",
+				filter = { event = "msg_showmode" },
+			},
+		},
 		lsp = {
 			-- override markdown rendering so that **cmp** and other plugins use **Treesitter**
 			override = {
