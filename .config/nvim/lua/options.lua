@@ -26,6 +26,9 @@ opt.tabstop = 2
 opt.softtabstop = 2
 opt.shiftwidth = 2
 
+-- Status column
+opt.statuscolumn = ""
+
 -- GUI Cursor
 opt.guicursor = ""
 
@@ -70,9 +73,6 @@ user_command("Wq", "wq", {})
 user_command("Wa", "wa", {})
 user_command("Wq", "wq", {})
 user_command("Wa", "wa", {})
-
--- Dismiss Noice Messages
-keymap.set("n", "<leader>nd", "<cmd>NoiceDismiss<CR>", { desc = "Dismiss Noice Messages" })
 
 -- Half page jumping keymaps
 keymap.set("n", "<C-d>", "<C-d>zz")
