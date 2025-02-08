@@ -72,22 +72,6 @@ alias top="glances"
 alias fetch="fastfetch"
 alias lg="lazygit"
 
-# Manage tmux sessions
-function ta() {
-  session_name="${1:-default}"
-  tmux new-session -A -s "$session_name"
-}
-function tk() {
-  if [ -z "$1" ]; then
-    tmux kill-session
-  else
-    tmux kill-session -t "$1"
-  fi
-}
-alias taa="tmux attach"
-alias tl="tmux list-sessions"
-alias td="tmux detach"
-
 # Aliases for versioning
 alias python="python3"
 alias pip="pip3"
