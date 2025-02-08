@@ -23,10 +23,6 @@ My configuration for Windows 11 based installations
 **Game Engine** -> Godot/Mono \
 **Package Manager** -> Scoop \
 
-## Todo
-
-- [ ] Find an `rm` equivelent for Windows/Powershell
-
 ## How to use
 
 1. Install [Scoop](https://scoop.sh/):
@@ -69,19 +65,29 @@ Invoke-RestMethod -Uri https://get.scoop.sh | Invoke-Expression
    | [xh](https://github.com/ducaale/xh/) | More friendly alternative to cURL |
    | [zoxide](https://github.com/ajeetdsouza/zoxide) | `cd` with superpowers (remembers and fuzzy finds your previous paths) |
 
-3. Clone this repo using:
+3. Download [gomi](https://github.com/babarot/gomi/releases/latest) and put it on the **$PATH**
+
+4. Clone this repo using:
 
 ```pwsh
 git clone https://github.com/Souvlaki42/dotfiles.git --branch windows ~/dotfiles
 ```
 
-4. Install [powershell syntax highlighting](https://github.com/digitalguy99/pwsh-syntax-highlighting) using:
+5. Install the required powershell modules:
+
+- [Syntax Highlighting](https://github.com/digitalguy99/pwsh-syntax-highlighting)
 
 ```pwsh
 Install-Module -Name syntax-highlighting
 ```
 
-5. Copy those commands into a **Powershell** instance to create the symbolic links for:
+- [Terminal icons](https://github.com/devblackops/Terminal-Icons)
+
+```pwsh
+Install-Module -Name Terminal-Icons -Repository PSGallery
+```
+
+6. Copy those commands into a **Powershell** instance to create the symbolic links for:
 
 - My Powershell profile file
 
