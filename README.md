@@ -1,101 +1,103 @@
 # Dotfiles
-My configuration repository for Arch Linux based installations.
 
-![I use Arch BTW](https://raw.githubusercontent.com/Souvlaki42/dotfiles/main/.local/assets/arch.jpg)
+My configuration for Windows 11 based installations
 
-This now includes a lot of stuff I don't use anymore, but I'm keeping it here for future reference.
+![Windows 11 Logo](https://upload.wikimedia.org/wikipedia/commons/e/e6/Windows_11_logo.svg)
 
-Also, it includes stuff for my WSL2 installations with WezTerm and Neovim.
+> [!IMPORTANT]
+> If you like this repo consider giving it a ⭐. Thank you for your time.
 
 ## Uses
-OS -> Arch Linux/WSL2 \
-Window Manager -> Hyprland \
-Display Manager -> SDDM (Theme: Chili) \
-Theme -> Catppuccin Mocha \
-Dotfiles Manager -> GNU Stow \
-Fetch -> Fastfetch \
-Prompt -> Oh My Posh (RIP p10k) \
-Cursor -> Bibata Modern Ice \
-Font -> Hack Nerd Font \
-Terminal -> WezTerm \
-Filemanager -> Thunar \
-Browser -> Zen Browser \
-Launcher -> Wofi \
-Bar -> HyprPanel \
-Logout -> Wlogout \
-Chat -> WebCord \
-Music -> Spotify \
-Editor -> VS Code/Neovim/Zed \
-Notes -> Obsidian \
-Game Engine -> Godot/Mono \
-Screenshot Engine -> Hyprshot
+
+**OS** -> Windows 11 24H2 Home Edition \
+**Fetch** -> Fastfetch \
+**Prompt** -> Oh My Posh (RIP p10k) \
+**Cursor** -> Bibata Modern Ice \
+**Font** -> Hack Nerd Font \
+**Terminal** -> Windows Terminal \
+**Filemanager** -> Windows Explorer \
+**Chat** -> VenCord \
+**Music** -> Youtube \
+**Editor** -> VS Code/Neovim \
+**Notes** -> Obsidian \
+**Game Engine** -> Godot/Mono \
+**Package Manager** -> Scoop \
+
+## Todo
+
+- [ ] Find an `rm` equivelent for Windows/Powershell
 
 ## How to use
-1. Connect to internet.
-Ethernet should work automatically.
-For WiFi, run these:
-```bash
-# First, open the WiFi connection utility tool:
-iwctl
-# If you do not know your wireless device name, list all Wi-Fi devices:
-device list
-# Then, to initiate a scan for networks (note that this command will not output anything):
-station <device> scan
-# You can then list all available networks:
-station <device> get-networks
-# Finally, to connect to a network:
-station <device> connect <SSID>
-# You may get prompted to type the network's passphrase
-# To make sure that the connection was initialized correctly:
-station <device> show
-# Quit the tool and move to the next step.
-# For more documentation related to WiFi: https://wiki.archlinux.org/title/iwd.
-```
-2. Partition your drive.
-You can choose automatic, but this is how to do it manually:
-```bash
-# First, list disks:
-fdisk -l
-# Then, open partition manager tool to the disk you plan to install Arch Linux to:
-cfdisk /dev/<disk_name>
-# Delete any previous partitions you don't need now.
-# You need to manually create:
-# - An 1G EFI system partition out of free space.
-# - A <ram_size>G Linux swap partition out of free space (optional).
-# - A Linux filesystem partition with the remaining free space.
-# Write the changes you just did and exit the partitioning tool.
-# Next, format the partitions you just created:
-mkfs.fat -F32 /dev/<efi_partition> # Format efi_partition as fat32.
-mkfs.(ext4 or btrfs) /dev/<filesystem_partition> # Format filesystem_partition as ext4 or btrfs. 
-mkswap /dev/<swap_partition> # Register the swap_partition.
-swapon /dev/<swap_partition> # Enable the swap_partition.
-# Finally, mount the efi and filesystem partitions (and optionally the windows one):
-mount /dev/<filesystem_partition> /mnt # Mount filesystem_partition to /mnt.
-mount /dev/<efi_partition> /mnt/boot # Mount efi_partition to /mnt/boot.
-mount /dev/<windows_partition> /mnt/windows # Mount windows_partition to /mnt/windows.
-```
-3. Run the archinstall script:
-```bash
-# Using my pre-defined configuration file
-archinstall --config https://raw.githubusercontent.com/Souvlaki42/dotfiles/main/.local/assets/user_configuration.json
-# Manual configuration
-archinstall
-# DON'T FORGET, to set up a user account.
-# OPTIONALY, you can set up a root password as well.
-# OPTIONALY, you can make any other changes you want. (If you change anything else, please save new user configuration to /mnt/root or somewhere else)
-# When you are done configuring, press install, wait to be done, say no to chroot, reboot and move to the next and final step.
-```
-4. Configure and customize the system to your liking.
-```bash
-git clone https://github.com/Souvlaki42/dotfiles.git $HOME/dotfiles # Can be any other directory you like.
-cd $HOME/dotfiles # Or any other directory you chose to use.
-stow . # Create the required symlinks using GNU Stow so the system functions like you want to.
-reboot # (or sudo reboot) This is optional but recommended to make sure the changes are applied before using the system.
+
+1. Install [Scoop](https://scoop.sh/):
+
+```pwsh
+Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
+Invoke-RestMethod -Uri https://get.scoop.sh | Invoke-Expression
 ```
 
-## Screenshots
-![Browser](https://raw.githubusercontent.com/Souvlaki42/dotfiles/main/.local/assets/browser.png)
-![Terminal](https://raw.githubusercontent.com/Souvlaki42/dotfiles/main/.local/assets/terminal.png)
-![Files](https://raw.githubusercontent.com/Souvlaki42/dotfiles/main/.local/assets/files.png)
-![Desktop](https://raw.githubusercontent.com/Souvlaki42/dotfiles/main/.local/assets/desktop.png)
-![Launcher](https://raw.githubusercontent.com/Souvlaki42/dotfiles/main/.local/assets/launcher.png)
+2. Install those apps using `scoop install [app]`:
+   | App | Description |
+   | ------------- | ------------- |
+   | [7zip](https://7-zip.org) | A multi-format file archiver with high compression ratios (required for scoop) |
+   | [bat](https://github.com/sharkdp/bat) | Unix's `cat` replacement |
+   | [bottom](https://clementtsang.github.io/bottom) | Graphical process/system monitor (optional dependency) |
+   | [bun](https://bun.sh) | Faster alternative to [Node.js](https://nodejs.org/en) |
+   | [cloc](https://github.com/AlDanial/cloc) | Count lines of code |
+   | [cmake](https://cmake.org/) | Family of tools designed to build, test and package software |
+   | [dark](https://wixtoolset.org/) | WiX (Windows Installer XML) Toolset Decompiler (optional dependency) |
+   | [deno](https://deno.land/) | Another alternative to [Node.js](https://nodejs.org/en) (built by the same [guy](https://en.wikipedia.org/wiki/Ryan_Dahl)) |
+   | [eza](https://github.com/eza-community/eza) | A modern, maintained replacement for ls, built on exa. |
+   | [fastfetch](https://github.com/fastfetch-cli/fastfetch) | A maintained, feature-rich and performance oriented, neofetch like system information tool |
+   | [ffmpeg](https://ffmpeg.org/) | A complete, cross-platform solution to record, convert and stream audio and video. |
+   | [fzf](https://github.com/junegunn/fzf) | A general-purpose command-line fuzzy finder |
+   | [gh](https://cli.github.com/) | GitHub CLI |
+   | [git](https://gitforwindows.org/) | Distributed version control system (required for scoop) |
+   | [go](https://golang.org/) | The golang programming language |
+   | [goreleaser](https://goreleaser.com/) | Release automation tool for Go projects. |
+   | [innounp](https://www.rathlev-home.de/tools/prog-e.html#unpack) | Inno Setup Unpacker (Optional dependency) |
+   | [just](https://just.systems/) | A command runner written in rust |
+   | [lazygit](https://github.com/jesseduffield/lazygit) | A simple terminal UI for git commands |
+   | [make](https://www.gnu.org/software/make/) | Build automation tool. |
+   | [mkcert](https://github.com/FiloSottile/mkcert) | A simple zero-config tool to make locally trusted development certificates with any names you'd like. |
+   | [msys2](http://www.msys2.org/) | A software distro and building platform for Windows. |
+   | [neovim](https://neovim.io/) | Vim-fork focused on extensibility and usability |
+   | [nodejs-lts](https://nodejs.org/) | Node.js LTS |
+   | [octave](https://www.gnu.org/software/octave/) | A high-level language primarily intended for numerical computations. |
+   | [oh-my-posh](https://ohmyposh.dev/) | A prompt theme engine for any shell |
+   | [pnpm](https://pnpm.io/) | A fast and disk space efficient Node package manager. |
+   | [xh](https://github.com/ducaale/xh/) | More friendly alternative to cURL |
+   | [zoxide](https://github.com/ajeetdsouza/zoxide) | `cd` with superpowers (remembers and fuzzy finds your previous paths) |
+
+3. Clone this repo using:
+
+```pwsh
+git clone https://github.com/Souvlaki42/dotfiles.git --branch windows ~/dotfiles
+```
+
+4. Install [powershell syntax highlighting](https://github.com/digitalguy99/pwsh-syntax-highlighting) using:
+
+```pwsh
+Install-Module -Name syntax-highlighting
+```
+
+5. Copy those commands into a **Powershell** instance to create the symbolic links for:
+
+- My Powershell profile file
+
+```pwsh
+cmd /C mklink $HOME\Documents\PowerShell\Microsoft.PowerShell_profile.ps1 $HOME\dotfiles\profile.ps1
+```
+
+- My **oh-my-posh** configuration file
+
+```pwsh
+cmd /C mklink $HOME\.oh-my-posh.toml $HOME\dotfiles\.oh-my-posh.toml
+```
+
+- My **git** configuration file
+
+```pwsh
+cmd /C mklink $HOME\.gitconfig $HOME\dotfiles\.gitconfig
+```
+

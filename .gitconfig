@@ -1,35 +1,34 @@
+[credential "helperselector"]
+	selected = <no helper>
 [user]
-  email = souvlaki420@gmail.com
-  name = Souvlaki42
-
+	email = souvlaki420@gmail.com
+	name = Souvlaki42
 [init]
-  defaultBranch = main
-
+	defaultBranch = main
 [push]
-  autoSetupRemote = true
-  default = current
-[alias]
-  undo = reset --soft HEAD^
-
+    	autoSetupRemote = true
+	default = current
 [core]
-  autocrlf = input
-  safecrlf = true
-  pager = delta
-
-[interactive]
-  diffFilter = delta --color-only
-
-[delta]
-  navigate = true    # use n and N to move between diff sections
-
-  line-numbers = true
-
-    # delta detects terminal colors automatically; set one of these to disable auto-detection
-    # dark = true
-    # light = true
-
-[merge]
-  conflictstyle = diff3
-
-[diff]
-  colorMoved = default
+	autocrlf = false
+	safecrlf = true
+	editor = code --wait
+	sshCommand = C:/Windows/System32/OpenSSH/ssh.exe
+[alias]
+	st = status -s
+	sta = status
+	conf = config --global --edit
+	undo = reset --soft HEAD^
+	ci = commit
+	co = checkout
+	cod = checkout .
+	rh = reset HEAD
+	aa = add -A
+	cdf = clean -df
+	pr = pull --rebase
+	br = branch
+	bra = branch -a
+	amend = commit -a --amend --no-edit
+	pfl = push --force-with-lease
+	open = !powershell -c gh repo view --web
+[credential]
+	helper = manager
